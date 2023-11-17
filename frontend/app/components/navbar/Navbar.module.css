@@ -19,9 +19,11 @@
   text-decoration: none;
 }
 
-.link:hover {
-  text-decoration: 3px underline dotted #BA8497;
+.link {
+  transition: color 0.2s ease-in-out;
 }
 
-
-/* #E0B8C6 #BA8497 #E0B8C6 */
+.link:hover {
+  text-decoration: 3px underline dotted #E0B8C6;
+  color: #BA8497;
+}
