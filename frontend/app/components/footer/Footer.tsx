@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 import classes from "classnames";
-import { links } from "@/app/utils/utils";
+import { links } from "@/mocks/mocks";
 
 export const Footer = () => {
   return (

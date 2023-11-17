@@ -1,0 +1,27 @@
+.navbar_container {
+  display: flex;
+  column-gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_container>* {
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: black;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: 3px underline dotted #BA8497;
+}
+
+
+/* #E0B8C6 #BA8497 #E0B8C6 */
