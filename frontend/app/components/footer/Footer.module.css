@@ -1,0 +1,31 @@
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+
+.links_container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.instagram {
+  background-image: url("../../../public/instagram.svg")
+}
+
+.github {
+  background-image: url("../../../public/github.svg")
+}
+
+.linkedin {
+  background-image: url("../../../public/linkedin.svg")
+}
