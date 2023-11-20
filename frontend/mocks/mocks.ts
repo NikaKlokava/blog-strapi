@@ -2,10 +2,10 @@ import image1 from "../public/test_img1.jpg";
 import image2 from "../public/test_img2.jpg";
 import image3 from "../public/test_img3.jpg";
 import image4 from "../public/test_img4.jpg";
+import image5 from "../public/test_img5.jpg";
 import logo1 from "../public/logo1.svg";
 import logo2 from "../public/logo2.svg";
 import logo3 from "../public/logo3.svg";
-import { string } from "yup";
 
 export const links = [
   {
@@ -110,3 +110,12 @@ export const aboutData = {
     voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat`,
   photo: image4,
 };
+
+type WishListType = {
+  href: string;
+  photo: any;
+};
+export const wishListData: WishListType[] = Array(10).fill({
+  href: "https://www.zara.com/lt/lt/%E2%80%9Ezw-collection--pavilkinio-stiliaus-suknele-su-zvyneliais-p09204110.html?v1=307074382&v2=2317646",
+  photo: image5,
+});

@@ -1,0 +1,6 @@
+.home_container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-left: 30px;
+  padding-right: 30px;
+}
