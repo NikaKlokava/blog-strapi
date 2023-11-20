@@ -5,6 +5,7 @@ import image4 from "../public/test_img4.jpg";
 import logo1 from "../public/logo1.svg";
 import logo2 from "../public/logo2.svg";
 import logo3 from "../public/logo3.svg";
+import { string } from "yup";
 
 export const links = [
   {
@@ -46,14 +47,27 @@ export const navbarItems = [
     path: "/about",
   },
 ];
+type Data = {
+  name: string;
+  logo: any;
 
-export const sectionsData = [
+  data: {
+    name: string;
+    descr: string;
+    title: string;
+    date: string;
+    photo: any;
+  }[];
+};
+export const sectionsData: Data[] = [
   {
     name: "travel",
     logo: logo1,
     data: Array(10).fill({
-      section: "travel",
+      name: "travel",
       descr: "travel_img",
+      title: "Some title example",
+      date: "16 October 2022",
       photo: image1,
     }),
   },
@@ -61,8 +75,10 @@ export const sectionsData = [
     name: "life",
     logo: logo2,
     data: Array(18).fill({
-      section: "life",
+      name: "life",
       descr: "travel_img",
+      title: "Some title example",
+      date: "14 October 2022",
       photo: image2,
     }),
   },
@@ -70,8 +86,10 @@ export const sectionsData = [
     name: "styles",
     logo: logo3,
     data: Array(15).fill({
-      section: "styles",
+      name: "styles",
       descr: "travel_img",
+      title: "Some title example",
+      date: "15 October 2022",
       photo: image3,
     }),
   },
