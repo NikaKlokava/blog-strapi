@@ -42,8 +42,7 @@ export const JoinTheBlog = () => {
                 className={styles.input_field}
               />
             </div>
-            {props.errors.name && <div>{props.errors.name}</div>}
-            {props.errors.email && <div>{props.errors.email}</div>}
+            {props.errors.name && props.dirty && <div>{props.errors.name}</div>}
             <button className={styles.submit_btn} type="submit">
               Submit
             </button>
