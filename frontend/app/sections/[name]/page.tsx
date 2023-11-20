@@ -26,15 +26,31 @@ const SectionPage = ({ params }: Props) => {
         </div>
         <h1>{params.name.toUpperCase()}</h1>
         <div className={styles.grid_container}>
-          {sectionData?.data.map((item, index) => {
+          {sectionData?.data.map((post, index) => {
             return (
-              <Image
-                src={item.photo}
-                alt={"item.descr"}
-                key={index}
-                width={350}
-                height={450}
-              />
+              <div key={index} className={styles.image_container}>
+                <Image
+                  src={post.photo}
+                  alt={"item.descr"}
+                  width={350}
+                  height={450}
+                />
+                <div className={styles.post_container}>
+                  <div className={styles.post_wrapper}>
+                    <div className={styles.logo_wrapper}>
+                      <Image
+                        src={sectionData?.logo}
+                        alt={sectionData?.name!}
+                        className={styles.small_logo_img}
+                      />
+                    </div>
+                    <div>{post.name.toUpperCase()}</div>
+                    <div className={styles.post_title}>{post.title}</div>
+                    <div className={styles.date}>{post.date}</div>
+                    <div className={styles.view_post_btn}>VIEW POST</div>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
