@@ -3,8 +3,13 @@
 import styles from "./JoinTheBlog.module.css";
 import { Formik, Form, Field } from "formik";
 import { initialFormValue, validationSchema } from "@/app/utils/utils";
+import classes from "classnames";
 
-export const JoinTheBlog = () => {
+type Props = {
+  extraClass: string;
+};
+
+export const JoinTheBlog = ({ extraClass }: Props) => {
   return (
     <Formik
       initialValues={initialFormValue}
@@ -15,7 +20,12 @@ export const JoinTheBlog = () => {
       }}
     >
       {(props) => (
-        <div className={styles.form_wrapper}>
+        <div
+          className={classes(
+            styles.form_wrapper,
+            extraClass && styles[extraClass]
+          )}
+        >
           <Form
             className={styles.form_container}
             onSubmit={(e) => {
