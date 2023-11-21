@@ -1,0 +1,54 @@
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: center;
+}
+
+.insta_posts_container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, minmax(50px, 300px));
+}
+
+.insta_photo {
+  position: relative;
+  align-self: flex-start;
+
+}
+
+.insta_post_wrapper::before {
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  border: 5px solid #E0B8C6;
+  opacity: 0;
+  background: rgba(255, 255, 255, .8);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.insta_photo:hover .insta_post_wrapper::before {
+  visibility: visible;
+  opacity: 1
+}
+
+.insta_post_wrapper>* {
+  display: none;
+}
+
+.insta_photo:hover .btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  padding: 10px;
+}

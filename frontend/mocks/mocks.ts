@@ -3,6 +3,7 @@ import image2 from "../public/test_img2.jpg";
 import image3 from "../public/test_img3.jpg";
 import image4 from "../public/test_img4.jpg";
 import image5 from "../public/test_img5.jpg";
+import image6 from "../public/test_img6.jpg";
 import logo1 from "../public/logo1.svg";
 import logo2 from "../public/logo2.svg";
 import logo3 from "../public/logo3.svg";
@@ -118,4 +119,23 @@ type WishListType = {
 export const wishListData: WishListType[] = Array(10).fill({
   href: "https://www.zara.com/lt/lt/%E2%80%9Ezw-collection--pavilkinio-stiliaus-suknele-su-zvyneliais-p09204110.html?v1=307074382&v2=2317646",
   photo: image5,
+});
+
+export type InstaAestheticType = {
+  photo: any;
+  description: string;
+  date: string;
+  location: string;
+  tags: string[];
+};
+
+export const instaAestheticData: InstaAestheticType[] = Array(9).fill({
+  photo: image6,
+  description: `Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed do eiusmod tempor incididunt ut
+  labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi`,
+  date: "14th October 2023",
+  location: "Vancouver",
+  tags: ["#travel", "#aesthetics", "#life", "#blog"],
 });
