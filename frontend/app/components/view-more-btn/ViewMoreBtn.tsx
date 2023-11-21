@@ -3,18 +3,18 @@
 import { InstaAestheticType } from "@/mocks/mocks";
 import { useState } from "react";
 import styles from "./ViewMoreBtn.module.css";
-import { InstaPost } from "../inst-post/InstaPost";
+import { InstaPost } from "../insta-post/InstaPost";
 
 export const ViewMoreBtn = ({ post }: { post: InstaAestheticType }) => {
-  const [instaPostVisible, setInstaPostVisible] = useState(false);
-  
+  const [instaPostVisible, setInstaPostVisible] = useState<boolean>();
+
   return (
     <>
       <div
         className={styles.view_more_btn}
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           setInstaPostVisible(true);
-          scroll({ top: 0 });
         }}
       >
         View More

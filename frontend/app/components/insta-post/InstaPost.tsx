@@ -1,3 +1,5 @@
+"use client";
+
 import { InstaAestheticType } from "@/mocks/mocks";
 import Image from "next/image";
 import styles from "./InstaPost.module.css";
