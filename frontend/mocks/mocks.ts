@@ -45,7 +45,7 @@ export const navbarItems = [
     path: "/about",
   },
 ];
-type Data = {
+export type Post = {
   id: string;
   name: string;
   descr: string;
@@ -58,12 +58,12 @@ type Data = {
   }[];
 };
 
-export const sectionsData: Data[] = [
+export const posts: Post[] = [
   {
     id: "123dsaaa",
     name: "travel",
     descr: "travel_img",
-    title: "Some title example",
+    title: "Some title example 1",
     date: "16 October 2022",
     photo: image1,
     content: [
@@ -79,7 +79,7 @@ export const sectionsData: Data[] = [
     id: "1234dvcad",
     name: "life",
     descr: "life_img",
-    title: "Some title example",
+    title: "Some title example 2",
     date: "16 October 2022",
     photo: image2,
     content: [
@@ -87,7 +87,51 @@ export const sectionsData: Data[] = [
         description: `Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna`,
-        photos: [image2, image3, image6, image1],
+        photos: [image2, image6],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image1],
+      },
+    ],
+  },
+  {
+    id: "123dsaaa",
+    name: "travel",
+    descr: "travel_img",
+    title: "Some title example 4",
+    date: "16 October 2022",
+    photo: image1,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image3, image1],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image3, image6, image1],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image3],
       },
     ],
   },
@@ -95,7 +139,7 @@ export const sectionsData: Data[] = [
     id: "123sdvadsa",
     name: "styles",
     descr: "styles_img",
-    title: "Some title example",
+    title: "Some title example 3",
     date: "16 October 2022",
     photo: image3,
     content: [
@@ -108,50 +152,6 @@ export const sectionsData: Data[] = [
     ],
   },
 ];
-
-// export const sectionsData: Data[] = [
-//   {
-//     name: "travel",
-//     logo: logo1,
-//     data: Array(10).fill({
-//       name: "travel",
-//       descr: "travel_img",
-//       title: "Some title example",
-//       date: "16 October 2022",
-//       photo: image1,
-//       content: [
-//         {
-//           description: `Lorem ipsum dolor sit amet, consectetur
-//           adipiscing elit, sed do eiusmod tempor incididunt ut
-//           labore et dolore magna`,
-//           photos: [image2, image3, image6, image1],
-//         },
-//       ],
-//     }),
-//   },
-//   {
-//     name: "life",
-//     logo: logo2,
-//     data: Array(18).fill({
-//       name: "life",
-//       descr: "travel_img",
-//       title: "Some title example",
-//       date: "14 October 2022",
-//       photo: image2,
-//     }),
-//   },
-//   {
-//     name: "styles",
-//     logo: logo3,
-//     data: Array(15).fill({
-//       name: "styles",
-//       descr: "travel_img",
-//       title: "Some title example",
-//       date: "15 October 2022",
-//       photo: image3,
-//     }),
-//   },
-// ];
 
 export const aboutData = {
   greeting: "Welcome to my blog!",

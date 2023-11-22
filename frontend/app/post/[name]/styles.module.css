@@ -13,12 +13,14 @@
 }
 
 .photo_container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 400px));
+  justify-content: center;
   align-items: center;
-  row-gap: 10px;
+  gap: 10px;
+  align-items: center;
 }
 
 .description {
-  font-size: 20px;
+  font-size: 18px;
 }

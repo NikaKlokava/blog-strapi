@@ -6,7 +6,7 @@ import { initialFormValue, validationSchema } from "@/app/utils/utils";
 import classes from "classnames";
 
 type Props = {
-  extraClass: string;
+  extraClass?: string;
 };
 
 export const JoinTheBlog = ({ extraClass }: Props) => {
