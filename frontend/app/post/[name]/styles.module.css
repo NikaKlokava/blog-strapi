@@ -12,6 +12,12 @@
   row-gap: 30px;
 }
 
+.post_title {
+  align-self: center;
+  font-size: 30px;
+  border-bottom: 3px dotted #E0B8C6;
+}
+
 .photo_container {
   display: grid;
   grid-template-columns: repeat(2, minmax(150px, 400px));

@@ -10,13 +10,13 @@ type Props = {
 
 const PostPage = ({ params }: Props) => {
   const post = posts.find(
-    (post) =>
-      post.title.toLowerCase() === params.name.split("-").join(" ")
+    (post) => post.title.toLowerCase() === params.name.split("-").join(" ")
   );
 
   return (
     <div className={styles.container}>
       <div className={styles.post_container}>
+        <div className={styles.post_title}>{post?.title}</div>
         {post?.content.map((item, i) => {
           return (
             <>
