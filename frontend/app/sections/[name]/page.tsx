@@ -25,16 +25,11 @@ const SectionPage = ({ params }: Props) => {
       <div className={styles.section_container}>
         <div className={styles.section_logo}>
           <div className={styles.logo}>
-            {sectionPosts.map((post, i) => {
-              return (
-                <Image
-                  src={logo}
-                  alt={post?.name}
-                  className={styles.logo_img}
-                  key={i}
-                />
-              );
-            })}
+            <Image
+              src={logo}
+              alt={`${params.name}_logo`}
+              className={styles.logo_img}
+            />
           </div>
         </div>
         <h1>{params.name.toUpperCase()}</h1>
