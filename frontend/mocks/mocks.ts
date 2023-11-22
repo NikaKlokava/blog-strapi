@@ -48,10 +48,10 @@ export const navbarItems = [
 export type Post = {
   id: string;
   name: string;
-  descr: string;
   title: string;
   date: string;
   photo: any;
+  best_status: boolean;
   content: {
     description: string;
     photos: any[];
@@ -62,10 +62,10 @@ export const posts: Post[] = [
   {
     id: "123dsaaa",
     name: "travel",
-    descr: "travel_img",
     title: "Some title example 1",
     date: "16 October 2022",
     photo: image1,
+    best_status: false,
     content: [
       {
         description: `Lorem ipsum dolor sit amet, consectetur
@@ -78,10 +78,10 @@ export const posts: Post[] = [
   {
     id: "1234dvcad",
     name: "life",
-    descr: "life_img",
     title: "Some title example 2",
     date: "16 October 2022",
     photo: image2,
+    best_status: false,
     content: [
       {
         description: `Lorem ipsum dolor sit amet, consectetur
@@ -104,10 +104,10 @@ export const posts: Post[] = [
   {
     id: "123dsaaa",
     name: "travel",
-    descr: "travel_img",
     title: "Some title example 4",
     date: "16 October 2022",
     photo: image1,
+    best_status: true,
     content: [
       {
         description: `Lorem ipsum dolor sit amet, consectetur
@@ -138,10 +138,10 @@ export const posts: Post[] = [
   {
     id: "123sdvadsa",
     name: "styles",
-    descr: "styles_img",
     title: "Some title example 3",
     date: "16 October 2022",
     photo: image3,
+    best_status: true,
     content: [
       {
         description: `Lorem ipsum dolor sit amet, consectetur

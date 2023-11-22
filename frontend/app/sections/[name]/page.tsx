@@ -21,7 +21,7 @@ const SectionPage = ({ params }: Props) => {
     params.name === "travel" ? logo1 : params.name === "life" ? logo2 : logo3;
 
   return (
-    <div className={" flex flex-col items-center"}>
+    <div className={styles.main_container}>
       <div className={styles.section_container}>
         <div className={styles.section_logo}>
           <div className={styles.logo}>
