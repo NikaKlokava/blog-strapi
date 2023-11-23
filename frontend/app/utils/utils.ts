@@ -7,3 +7,4 @@ export const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is a required field").email(),
 });
 export const initialFormValue = { name: "", email: "" };
+

@@ -196,3 +196,14 @@ export const instaAestheticData: InstaAestheticType[] = Array(9).fill({
   location: "Vancouver",
   tags: ["#travel", "#aesthetics", "#life", "#blog"],
 });
+
+export const homePageData = {
+  title: "Hello from TRAVELER!",
+  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+  fugit, aliquam animi nostrum repudiandae non quibusdam. Commodi,
+  blanditiis, mollitia eaque reprehenderit fugiat, aut facere dolorem
+  voluptatum a nulla ut. Iure? Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Temporibus fugit, aliquam animi nostrum repudiandae
+  non quibusdam. Commodi, blanditiis, mollitia eaque reprehenderit fugiat,
+  aut facere dolorem voluptatum a nulla ut. Iure?`,
+};
