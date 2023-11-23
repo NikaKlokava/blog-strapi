@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ViewMoreBtn } from "../components/view-more-btn/ViewMoreBtn";
 import { WishList } from "../components/wish-list/WishList";
 import styles from "./styles.module.css";
+import type { Metadata } from "next";
 
 const InstaAestheticsPage = () => {
   return (
@@ -33,3 +34,17 @@ const InstaAestheticsPage = () => {
 };
 
 export default InstaAestheticsPage;
+
+type MetaProps = {
+  params: { name: string };
+};
+
+export async function generateMetadata({
+  params,
+}: MetaProps): Promise<Metadata> {
+  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
+
+  return {
+    title: `Insta Aesthetics`,
+  };
+}

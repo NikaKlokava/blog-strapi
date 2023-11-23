@@ -3,6 +3,7 @@ import { WishList } from "@/app/components/wish-list/WishList";
 import { posts } from "@/mocks/mocks";
 import Image from "next/image";
 import styles from "./styles.module.css";
+import type { Metadata } from "next";
 
 type Props = {
   params: { name: string };
@@ -37,3 +38,22 @@ const PostPage = ({ params }: Props) => {
 };
 
 export default PostPage;
+
+type MetaProps = {
+  params: { name: string };
+};
+
+export async function generateMetadata({
+  params,
+}: MetaProps): Promise<Metadata> {
+  // const name = params.name.charAt(0).toUpperCase() + params.name.slice(1);
+  const name =
+    params.name.split("-").join(" ").charAt(0).toUpperCase() +
+    params.name.split("-").join(" ").slice(1);
+
+  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
+
+  return {
+    title: `${name}`,
+  };
+}

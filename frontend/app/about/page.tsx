@@ -2,6 +2,7 @@ import Image from "next/image";
 import { JoinTheBlog } from "../components/join-the-blog/JoinTheBlog";
 import styles from "./styles.module.css";
 import { aboutData } from "@/mocks/mocks";
+import type { Metadata } from "next";
 
 const AboutPage = () => {
   return (
@@ -24,3 +25,17 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+type MetaProps = {
+  params: { name: string };
+};
+
+export async function generateMetadata({
+  params,
+}: MetaProps): Promise<Metadata> {
+  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
+
+  return {
+    title: `About Archives`,
+  };
+}
