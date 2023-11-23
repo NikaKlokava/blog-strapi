@@ -7,6 +7,24 @@ import { Post, posts } from "@/mocks/mocks";
 import { JoinTheBlog } from "@/app/components/join-the-blog/JoinTheBlog";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+type MetaProps = {
+  params: { name: string };
+};
+
+export async function generateMetadata({
+  params,
+}: MetaProps): Promise<Metadata> {
+  const name = params.name.charAt(0).toUpperCase() + params.name.slice(1);
+
+  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
+
+  return {
+    title: `${name} Archives`,
+  };
+}
+
 type Props = {
   params: { name: string };
 };
