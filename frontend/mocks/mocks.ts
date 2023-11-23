@@ -151,6 +151,178 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    id: "123sddsa",
+    name: "styles",
+    title: "Some title example 13",
+    date: "17 October 2022",
+    photo: image3,
+    best_status: true,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image2, image3, image6, image1],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image2, image1],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image6, image1],
+      },
+    ],
+  },
+  {
+    id: "123dsaaa",
+    name: "travel",
+    title: "Some title example 14",
+    date: "18 October 2022",
+    photo: image1,
+    best_status: true,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image3, image1],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image3],
+      },
+    ],
+  },
+  {
+    id: "1234dvcad",
+    name: "life",
+    title: "Some title example 112",
+    date: "19 October 2022",
+    photo: image2,
+    best_status: false,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image2, image6],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image1, image2, image6],
+      },
+    ],
+  },
+  {
+    id: "1234dvcad",
+    name: "life",
+    title: "Some title example 112",
+    date: "19 October 2022",
+    photo: image2,
+    best_status: false,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image2, image6],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image1, image2, image6],
+      },
+    ],
+  },
+  {
+    id: "1234dvcad",
+    name: "life",
+    title: "Some title example 122",
+    date: "20 October 2022",
+    photo: image2,
+    best_status: false,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image1, image2, image6],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image2, image6],
+      },
+    ],
+  },
+  {
+    id: "1234dvcad",
+    name: "life",
+    title: "Some title example 312",
+    date: "19 October 2022",
+    photo: image2,
+    best_status: false,
+    content: [
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image2, image6, image2, image6],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image1, image2, image6],
+      },
+      {
+        description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+        photos: [image1, image2, image6],
+      },
+    ],
+  },
 ];
 
 export const aboutData = {

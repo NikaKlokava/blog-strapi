@@ -5,6 +5,7 @@ import styles from "./Post.module.css";
 
 type Props = {
   posts: Post[];
+  currentPage?: number;
 };
 export const PostItem = ({ posts }: Props) => {
   return (

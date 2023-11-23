@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  column-gap: 20px;
+  grid-column: 1/3;
+  align-items: center;
+  justify-content: center;
+}
+
+.num_container {
+
+  cursor: pointer;
+  color: #9a7884;
+  min-width: 25px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #9a7884;
+}
+
+.num_container:hover {
+  color: black;
+  border-color: black;
+}
