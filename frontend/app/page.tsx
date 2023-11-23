@@ -1,4 +1,5 @@
-import { homePageData, Post, posts } from "@/mocks/mocks";
+import { Post, posts } from "@/mocks/mocks";
+import { HomeDescription } from "./components/home-description/HomeDescription";
 import { JoinTheBlog } from "./components/join-the-blog/JoinTheBlog";
 import { Pagination } from "./components/pagination/Pagination";
 import { PostItem } from "./components/post-item/Post";
@@ -24,9 +25,7 @@ export default function Home({ searchParams }: Props) {
 
   return (
     <main className={styles.main_container}>
-      <div className={styles.main_description}>{homePageData.description}</div>
-      <div className={styles.title}>{homePageData.title}</div>
-      <div className={styles.background_img} />
+      <HomeDescription />
       <div className={styles.home_container}>
         <div className={styles.posts_container}>
           <PostItem posts={paginatedPosts} currentPage={currentPage} />

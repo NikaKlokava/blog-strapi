@@ -5,7 +5,11 @@
   align-items: center;
 }
 
-.navbar_container>* {
+.navbar_icon {
+  display: none;
+}
+
+.navbar_title {
   font-size: 16px;
   letter-spacing: 5px;
 }
@@ -26,4 +30,31 @@
 .link:hover {
   text-decoration: 3px underline dotted #E0B8C6;
   color: #BA8497;
+}
+
+@media screen and (max-width:1000px) {
+  .navbar_container {
+    column-gap: 15px;
+  }
+
+  .navbar_title {
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width:750px) {
+  .navbar_container>* {
+    display: none;
+  }
+
+  .navbar_icon {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-color: aquamarine;
+    align-self: flex-end;
+  }
 }

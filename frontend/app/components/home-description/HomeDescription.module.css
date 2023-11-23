@@ -1,0 +1,18 @@
+.main_description {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #e0b8c64d;
+}
+
+.title {
+  font-size: 30px;
+  align-self: center;
+}
+
+.background_img {
+  min-height: 100vh;
+  width: 100vw;
+  background-size: 100vw 100vh;
+  filter: opacity(50%);
+  background-image: url("../../../public/back.jpg");
+}
