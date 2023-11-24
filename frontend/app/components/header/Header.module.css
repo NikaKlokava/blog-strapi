@@ -31,3 +31,9 @@
   background-image: url("../../../public/location.svg");
   opacity: 0.15;
 }
+
+@media screen and (max-width:750px) {
+  .header_container {
+    row-gap: 0px;
+  }
+}

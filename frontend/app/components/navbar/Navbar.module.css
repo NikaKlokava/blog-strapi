@@ -44,17 +44,58 @@
 }
 
 @media screen and (max-width:750px) {
-  .navbar_container>* {
+
+  .navbar_container>*,
+  .dot {
+    height: 0px;
     display: none;
   }
 
+  .navbar_active_icon,
   .navbar_icon {
+    height: max-content;
     display: block;
-    position: absolute;
     width: 40px;
     height: 40px;
     background-size: 40px 40px;
-    background-color: aquamarine;
+    cursor: pointer;
+    position: absolute;
     align-self: flex-end;
+  }
+
+  .navbar_active_icon {
+    background: url("../../../public/close.svg");
+  }
+
+  .navbar_icon {
+    background: url("../../../public/navbar.svg");
+  }
+
+  .none {
+    display: none;
+    height: 0px;
+  }
+
+  .navbar_active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    row-gap: 15px;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border: 10px solid #E0B8C6;
+  }
+
+  .navbar_active .navbar_container>* {
+    display: flex;
+  }
+
+  .navbar_title {
+    border-bottom: 3px dotted #E0B8C6;
   }
 }

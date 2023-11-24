@@ -47,6 +47,7 @@ const SectionPage = ({ params }: Props) => {
               src={logo}
               alt={`${params.name}_logo`}
               className={styles.logo_img}
+              priority={true}
             />
           </div>
         </div>
@@ -61,6 +62,7 @@ const SectionPage = ({ params }: Props) => {
                     alt={"item.descr"}
                     width={350}
                     height={450}
+                    priority={true}
                   />
                   <div className={styles.post_container}>
                     <div className={styles.post_wrapper}>
@@ -69,6 +71,7 @@ const SectionPage = ({ params }: Props) => {
                           src={logo}
                           alt={post?.name!}
                           className={styles.small_logo_img}
+                          priority={true}
                         />
                       </div>
                       <div>{post?.name.toUpperCase()}</div>

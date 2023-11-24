@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Kaushan_Script, Poiret_One } from "next/font/google";
+import { Poiret_One } from "next/font/google";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 import "./globals.css";
 
 const poiret = Poiret_One({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const kaushan = Kaushan_Script({
   weight: "400",
   subsets: ["latin"],
 });

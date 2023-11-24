@@ -25,6 +25,11 @@
 @media screen and (max-width:1000px) {
   .list_container {
     grid-template-columns: repeat(4, minmax(50px, 100px));
+  }
+}
 
+@media screen and (max-width:550px) {
+  .list_container {
+    grid-template-columns: repeat(2, minmax(50px, 100px));
   }
 }

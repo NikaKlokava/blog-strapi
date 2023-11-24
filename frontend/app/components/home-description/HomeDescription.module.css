@@ -16,3 +16,11 @@
   filter: opacity(50%);
   background-image: url("../../../public/back.jpg");
 }
+
+@media screen and (max-width: 550px) {
+  .background_img {
+    min-height: 40vh;
+    width: 100%;
+    background-size: cover;
+  }
+}

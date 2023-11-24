@@ -29,3 +29,11 @@
 .linkedin {
   background-image: url("../../../public/linkedin.svg")
 }
+
+@media screen and (max-width: 500px) {
+  .footer_container {
+    flex-direction: column;
+    padding: 15px;
+    row-gap: 15px;
+  }
+}
