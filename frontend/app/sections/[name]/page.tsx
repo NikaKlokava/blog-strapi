@@ -60,8 +60,6 @@ const SectionPage = ({ params }: Props) => {
                   <Image
                     src={post?.photo!}
                     alt={"item.descr"}
-                    width={350}
-                    height={450}
                     priority={true}
                   />
                   <div className={styles.post_container}>
@@ -75,7 +73,16 @@ const SectionPage = ({ params }: Props) => {
                         />
                       </div>
                       <div>{post?.name.toUpperCase()}</div>
-                      <div className={styles.post_title}>{post?.title}</div>
+                      <Link
+                        href={`/post/${post?.title
+                          .toLowerCase()
+                          .split(" ")
+                          .join("-")}`}
+                        rel="preload"
+                        className={styles.post_title}
+                      >
+                        {post?.title}
+                      </Link>
                       <div className={styles.date}>{post?.date}</div>
                       <Link
                         className={styles.view_post_btn}
@@ -83,6 +90,7 @@ const SectionPage = ({ params }: Props) => {
                           .toLowerCase()
                           .split(" ")
                           .join("-")}`}
+                        rel="preload"
                       >
                         VIEW POST
                       </Link>

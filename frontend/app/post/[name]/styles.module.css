@@ -30,3 +30,18 @@
 .description {
   font-size: 18px;
 }
+
+@media screen and (max-width:1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .photo_container {
+    grid-template-columns: repeat(1, minmax(150px, 400px))
+  }
+}

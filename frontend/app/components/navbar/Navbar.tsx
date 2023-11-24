@@ -14,7 +14,12 @@ export const Navbar = () => {
         {navbarItems.map((item, index) => {
           return (
             <div className={styles.navbar_item} key={index}>
-              <Link href={item.path} className={styles.link}>
+              <Link
+                href={item.path}
+                className={styles.link}
+                rel="preload"
+                as={item.path}
+              >
                 <p className={styles.navbar_title}>{item.name}</p>
               </Link>
               <div className={styles.dot} />

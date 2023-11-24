@@ -68,9 +68,6 @@
 
 @media screen and (max-width: 650px) {
   .insta_posts_container {
-    width: 100%;
     grid-template-columns: repeat(1, minmax(50px, 350px));
   }
-
-
 }
