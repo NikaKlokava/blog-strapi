@@ -43,3 +43,10 @@
 .post_container:hover .title {
   color: black;
 }
+
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 16px;
+  }
+}

@@ -17,8 +17,8 @@ export const InstaPost = ({ post, close }: Props) => {
         <Image
           src={post?.photo}
           alt={"current_post"}
-          width={200}
-          height={200}
+          // width={200}
+          // height={200}
           priority={true}
           className={styles.post_photo}
         />

@@ -23,7 +23,14 @@ const PostPage = ({ params }: Props) => {
             <>
               <div className={styles.photo_container}>
                 {item?.photos?.map((photo, i) => {
-                  return <Image src={photo} key={i} alt={`post_img${i}`} />;
+                  return (
+                    <Image
+                      src={photo}
+                      key={i}
+                      alt={`post_img${i}`}
+                      priority={true}
+                    />
+                  );
                 })}
               </div>
               <div className={styles.description}>{item?.description}</div>

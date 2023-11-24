@@ -15,8 +15,6 @@ const InstaAestheticsPage = () => {
               <Image
                 src={item.photo}
                 alt={"insta_post_photo"}
-                height={400}
-                width={400}
                 priority={true}
               />
               <div className={styles.insta_post_wrapper}>

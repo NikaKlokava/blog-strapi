@@ -9,8 +9,8 @@ export const WishList = () => {
       <div className={styles.list_container}>
         {wishListData.map((item, i) => {
           return (
-            <a href={item.href} key={i} target="_blank">
-              <Image alt="wish_list_item" src={item.photo} />
+            <a href={item.href} key={i} target="_blank" rel="preload">
+              <Image alt="wish_list_item" src={item.photo} priority={true} />
             </a>
           );
         })}
