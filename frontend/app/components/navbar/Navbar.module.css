@@ -1,9 +1,17 @@
 .navbar_container {
   display: flex;
-  column-gap: 25px;
+  column-gap: 20px;
   justify-content: center;
   align-items: center;
 }
+
+.navbar_item {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .navbar_icon {
   display: none;

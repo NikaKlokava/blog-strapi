@@ -72,7 +72,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 .image_container:hover .post_wrapper {
   position: absolute;
   top: 0;
@@ -150,4 +149,27 @@
   background-color: white;
   border: 2px dotted #E0B8C6;
   color: #E0B8C6;
+}
+
+@media screen and (max-width:1000px) {
+  .grid_container {
+    grid-template-columns: repeat(2, minmax(300px, 350px));
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width:760px) {
+  .grid_container {
+    grid-template-columns: repeat(1, minmax(300px, 350px));
+  }
+
+  .main_container {
+    row-gap: 40px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .grid_container {
+    grid-template-columns: repeat(1, minmax(200px, 300px));
+  }
 }

@@ -13,11 +13,11 @@ export const Navbar = () => {
         <div className={styles.dot} />
         {navbarItems.map((item, index) => {
           return (
-            <div key={item.path}>
-              <Link href={item.path} key={item.path} className={styles.link}>
+            <div className={styles.navbar_item} key={index}>
+              <Link href={item.path} className={styles.link}>
                 <p className={styles.navbar_title}>{item.name}</p>
               </Link>
-              <div className={styles.dot} key={index} />
+              <div className={styles.dot} />
             </div>
           );
         })}
