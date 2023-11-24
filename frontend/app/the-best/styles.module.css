@@ -12,3 +12,19 @@
   align-items: center;
   gap: 10px;
 }
+
+@media screen and (max-width: 1100px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(100px, 350px));
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wrapper {
+    padding: 30px;
+  }
+
+  .container {
+    grid-template-columns: repeat(1, minmax(100px, 350px));
+  }
+}

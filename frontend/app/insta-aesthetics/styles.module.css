@@ -52,3 +52,25 @@
   z-index: 5;
   padding: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+  .insta_posts_container {
+    grid-template-columns: repeat(2, minmax(50px, 350px));
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .insta_posts_container {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(50px, 350px));
+  }
+
+
+}
