@@ -2,23 +2,29 @@
 
 import { InstaAestheticType } from "@/mocks/mocks";
 import { useState } from "react";
-import styles from "./ViewMoreBtn.module.css";
 import { InstaPost } from "../insta-post/InstaPost";
+import parentStyles from "../../insta-aesthetics/styles.module.css";
+import styles from "./ViewMoreBtn.module.css";
 
 export const ViewMoreBtn = ({ post }: { post: InstaAestheticType }) => {
   const [instaPostVisible, setInstaPostVisible] = useState<boolean>();
 
   return (
     <>
-      <div
-        className={styles.view_more_btn}
-        onClick={(e) => {
-          e.preventDefault();
-          setInstaPostVisible(true);
-        }}
-      >
-        View More
+      <div className={parentStyles.insta_post_wrapper}>
+        <div className={parentStyles.btn_wrapper}>
+          <div
+            className={styles.view_more_btn}
+            onClick={(e) => {
+              e.preventDefault();
+              setInstaPostVisible(true);
+            }}
+          >
+            View More
+          </div>
+        </div>
       </div>
+
       {instaPostVisible && (
         <InstaPost post={post} close={() => setInstaPostVisible(false)} />
       )}
