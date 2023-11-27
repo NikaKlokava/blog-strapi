@@ -17,11 +17,7 @@ const InstaAestheticsPage = () => {
                 alt={"insta_post_photo"}
                 priority={true}
               />
-              <div className={styles.insta_post_wrapper}>
-                <div className={styles.btn_wrapper}>
-                  <ViewMoreBtn post={item} />
-                </div>
-              </div>
+              <ViewMoreBtn post={item} />
             </div>
           );
         })}
