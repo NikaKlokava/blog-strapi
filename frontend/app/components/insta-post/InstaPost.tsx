@@ -1,6 +1,7 @@
 "use client";
 
 import { InstaAestheticType } from "@/mocks/mocks";
+import closeIcon from "../../../public/close.svg";
 import Image from "next/image";
 import styles from "./InstaPost.module.css";
 
@@ -17,13 +18,16 @@ export const InstaPost = ({ post, close }: Props) => {
         <Image
           src={post?.photo}
           alt={"current_post"}
-          // width={200}
-          // height={200}
           priority={true}
           className={styles.post_photo}
         />
         <div className={styles.post_data_container}>
-          <div className={styles.close_icon} onClick={close} />
+          <Image
+            src={closeIcon}
+            className={styles.close_icon}
+            alt={"close_icon"}
+            onClick={close}
+          />
           <div className={styles.location}>{post?.location}</div>
           <div className={styles.date}>{post?.date}</div>
           <div className={styles.post_descripton}>{post?.description}</div>

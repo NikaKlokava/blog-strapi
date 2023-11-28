@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import classes from "classnames";
+import Image from "next/image";
 import { links } from "@/mocks/mocks";
 
 export const Footer = () => {
@@ -10,11 +10,9 @@ export const Footer = () => {
       <div className={styles.links_container}>
         {links.map((link) => {
           return (
-            <a
-              key={link.name}
-              className={classes(styles[`${link.name}`], styles.icon)}
-              href={`${link.href}`}
-            />
+            <a key={link.name} className={styles.icon} href={`${link.href}`}>
+              <Image src={link.svg} alt={`${link.name}_svg`} />
+            </a>
           );
         })}
       </div>

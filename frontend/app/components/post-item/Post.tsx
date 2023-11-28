@@ -18,7 +18,14 @@ export const PostItem = ({ posts }: Props) => {
             className={styles.post_container}
             href={`/post/${post.title.toLowerCase().split(" ").join("-")}`}
           >
-            <Image src={post.photo} alt={`${post.name}_img`} priority={true} />
+            <Image
+              src={post.photo}
+              alt={`${post.name}_img`}
+              priority={true}
+              style={{
+                objectFit: "cover",
+              }}
+            />
             <div className={styles.post_small_description}>
               <div className={styles.title}>{post.title}</div>
               <div className={styles.date}>{post.date}</div>
