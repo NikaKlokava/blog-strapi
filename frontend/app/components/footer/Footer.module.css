@@ -18,17 +18,6 @@
   cursor: pointer;
 }
 
-.instagram {
-  background-image: url("../../../public/instagram.svg")
-}
-
-.github {
-  background-image: url("../../../public/github.svg")
-}
-
-.linkedin {
-  background-image: url("../../../public/linkedin.svg")
-}
 
 @media screen and (max-width: 500px) {
   .footer_container {

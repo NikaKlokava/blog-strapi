@@ -27,8 +27,6 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  background-size: 100px 100px;
-  background-image: url("../../../public/location.svg");
   opacity: 0.15;
 }
 

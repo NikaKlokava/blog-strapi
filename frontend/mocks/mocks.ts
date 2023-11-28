@@ -5,13 +5,25 @@ import image4 from "../public/test_img4.jpg";
 import image5 from "../public/test_img5.jpg";
 import image6 from "../public/test_img6.jpg";
 
-export const links = [
+import instagram from "../public/instagram.svg";
+import linkedin from "../public/linkedin.svg";
+import github from "../public/github.svg";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+type Links = { name: string; href: string; svg: StaticImport }[];
+
+export const links: Links = [
   {
     name: "linkedin",
     href: "https://www.linkedin.com/in/veranika-klokava-858b5b287",
+    svg: linkedin,
   },
-  { name: "github", href: "https://github.com/NikaKlokava" },
-  { name: "instagram", href: "https://www.instagram.com/nika_klokava" },
+  { name: "github", href: "https://github.com/NikaKlokava", svg: github },
+  {
+    name: "instagram",
+    href: "https://www.instagram.com/nika_klokava",
+    svg: instagram,
+  },
 ];
 
 export const navbarItems = [

@@ -2,8 +2,11 @@
 
 import { navbarItems } from "@/mocks/mocks";
 import { useState } from "react";
+import closeIcon from "../../../public/close.svg";
+import burgerIcon from "../../../public/navbar.svg";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -26,15 +29,23 @@ export const Navbar = () => {
             </div>
           );
         })}
-        <div
-          className={active ? styles.navbar_active_icon : styles.none}
-          onClick={() => setActive(false)}
-        />
+        {active && (
+          <Image
+            src={closeIcon}
+            alt={"close_navbar_icon"}
+            className={styles.navbar_active_icon}
+            onClick={() => setActive(false)}
+          />
+        )}
       </div>
-      <div
-        className={!active ? styles.navbar_icon : styles.none}
-        onClick={() => setActive(true)}
-      />
+      {!active && (
+        <Image
+          src={burgerIcon}
+          alt={"burger_icon"}
+          className={styles.navbar_icon}
+          onClick={() => setActive(true)}
+        />
+      )}
     </>
   );
 };
