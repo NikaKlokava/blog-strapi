@@ -1,12 +1,12 @@
 "use client";
 
-import { navbarItems } from "@/mocks/mocks";
 import { useState } from "react";
 import closeIcon from "../../../public/close.svg";
 import burgerIcon from "../../../public/navbar.svg";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import { navbarItems } from "@/app/utils/utils";
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);

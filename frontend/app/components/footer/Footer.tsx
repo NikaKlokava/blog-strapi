@@ -1,19 +1,9 @@
 import styles from "./Footer.module.css";
 import Image from "next/image";
+import { getDataArr } from "@/app/utils/utils";
 
-type Data = {
-  id: string;
-  attributes: {
-    name: string;
-    href: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    svg: any;
-  };
-}[];
 export const Footer = async () => {
-  const data: Data = await fetchData();
+  const data: FooterLinks = await getDataArr("links");
 
   return (
     <div className={styles.footer_container}>
@@ -42,12 +32,4 @@ export const Footer = async () => {
       </div>
     </div>
   );
-};
-
-const fetchData = async () => {
-  const response = await fetch(
-    `${process.env.STRAPI_API_URL}/api/links?populate=*`
-  );
-  const result = await response.json();
-  return result.data;
 };

@@ -3,20 +3,8 @@ import { JoinTheBlog } from "../components/join-the-blog/JoinTheBlog";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 
-type Data = {
-  id: number;
-  attributes: {
-    greeting: string;
-    description: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    photo: any;
-  };
-};
-
 const AboutPage = async () => {
-  const data: Data = await getData();
+  const data: AboutData = await getData();
 
   return (
     <div className="flex flex-col items-center gap-y-9 pl-10 pb-10 pr-10">

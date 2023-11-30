@@ -1,4 +1,4 @@
-import { Post } from "@/mocks/mocks";
+// import { Post } from "@/mocks/mocks";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Post.module.css";
@@ -19,9 +19,11 @@ export const PostItem = ({ posts }: Props) => {
             href={`/post/${post.title.toLowerCase().split(" ").join("-")}`}
           >
             <Image
-              src={post.photo}
-              alt={`${post.name}_img`}
+              src={process.env.STRAPI_API_URL + post.photo.data.attributes.url}
+              alt={`${post.section}_img`}
               priority={true}
+              width={350}
+              height={400}
               style={{
                 objectFit: "cover",
               }}
