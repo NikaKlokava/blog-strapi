@@ -6,7 +6,7 @@ import { InstaPost } from "../insta-post/InstaPost";
 import parentStyles from "../../insta-aesthetics/styles.module.css";
 import styles from "./ViewMoreBtn.module.css";
 
-export const ViewMoreBtn = ({ post }: { post: InstaAestheticType }) => {
+export const ViewMoreBtn = ({ post }: { post: PostType }) => {
   const [instaPostVisible, setInstaPostVisible] = useState<boolean>();
 
   return (

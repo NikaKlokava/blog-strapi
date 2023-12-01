@@ -1,12 +1,12 @@
 "use client";
 
-import { InstaAestheticType } from "@/mocks/mocks";
+// import { InstaAestheticType } from "@/mocks/mocks";
 import closeIcon from "../../../public/close.svg";
 import Image from "next/image";
 import styles from "./InstaPost.module.css";
 
 type Props = {
-  post: InstaAestheticType;
+  post: PostType;
   close: () => void;
 };
 
@@ -16,7 +16,9 @@ export const InstaPost = ({ post, close }: Props) => {
       <div className={styles.modal_wrapper} onClick={close}></div>
       <div className={styles.modal_container}>
         <Image
-          src={post?.photo}
+          src={"http://127.0.0.1:1337" + post.photo.data.attributes.url}
+          width={450}
+          height={400}
           alt={"current_post"}
           priority={true}
           className={styles.post_photo}
@@ -32,8 +34,8 @@ export const InstaPost = ({ post, close }: Props) => {
           <div className={styles.date}>{post?.date}</div>
           <div className={styles.post_descripton}>{post?.description}</div>
           <div className={styles.tags_container}>
-            {post?.tags.map((tag, i) => {
-              return <div key={i}>{tag}</div>;
+            {post?.tags.data.map((tag, i) => {
+              return <div key={i}>{tag.attributes.tag}</div>;
             })}
           </div>
         </div>
