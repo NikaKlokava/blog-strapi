@@ -34,14 +34,14 @@ export default async function Home({ searchParams }: Props) {
 
   return (
     <main className={styles.main_container}>
-      {/* @ts-expect-error Server Component  */}
+      {/*@ts-ignore */}
       <HomeDescription />
       <div className={styles.home_container}>
         <div className={styles.posts_container}>
           <PostItem posts={paginatedPosts} currentPage={currentPage} />
           <Pagination numOfPosts={posts?.length} pageSize={4} />
         </div>
-        {/* @ts-expect-error Server Component  */}
+        {/*@ts-ignore */}
         <WishList />
         <JoinTheBlog extraClass={"grid_style"} />
       </div>

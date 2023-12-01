@@ -17,9 +17,10 @@ const InstaAestheticsPage = async () => {
             <div key={i} className={styles.insta_photo}>
               <Image
                 src={
-                  data? 
-                  process.env.STRAPI_API_URL +
-                  item.attributes.photo.data.attributes.url : item.attributes.photo
+                  data
+                    ? process.env.STRAPI_API_URL +
+                      item.attributes.photo.data.attributes.url
+                    : item.attributes.photo
                 }
                 width={350}
                 height={400}
@@ -31,7 +32,7 @@ const InstaAestheticsPage = async () => {
           );
         })}
       </div>
-      {/* @ts-expect-error Server Component  */}
+      {/*@ts-ignore */}
       <WishList />
     </div>
   );
