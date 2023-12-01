@@ -9,6 +9,7 @@ import Link from "next/link";
 
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
+import { postsMockData } from "@/mocks/mocks";
 
 type MetaProps = {
   params: { name: string };
@@ -31,9 +32,12 @@ type Props = {
 const SectionPage = async ({ params }: Props) => {
   const data: PostsData = await getPosts();
 
-  const posts = data.reduce((accum: Post[], curr) => {
-    return [...accum, curr.attributes];
-  }, []);
+  const posts =
+    (data &&
+      data.reduce((accum: Post[], curr) => {
+        return [...accum, curr.attributes];
+      }, [])) ||
+    postsMockData;
 
   const sectionPosts = posts.reduce((accum: Post[], current) => {
     if (current.section === params.name) return [...accum, current];
@@ -58,14 +62,16 @@ const SectionPage = async ({ params }: Props) => {
         </div>
         <h1>{params.name.toUpperCase()}</h1>
         <div className={styles.grid_container}>
-          {sectionPosts.map((post, i) => {
+          {sectionPosts?.map((post, i) => {
             return (
               <>
                 <div className={styles.image_container}>
                   <Image
                     src={
-                      process.env.STRAPI_API_URL +
-                      post.photo.data.attributes.url
+                      post.photo.data
+                        ? process.env.STRAPI_API_URL +
+                          post.photo.data.attributes.url
+                        : post.photo
                     }
                     width={350}
                     height={400}

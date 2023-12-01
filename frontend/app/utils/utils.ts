@@ -9,29 +9,41 @@ export const validationSchema = Yup.object().shape({
 export const initialFormValue = { name: "", email: "" };
 
 export const getData = async (path: string) => {
-  const response = await fetch(
-    `${process.env.STRAPI_API_URL}/api/${path}?populate=*`
-  );
-  const result = await response.json();
-  return result.data[0];
+  try {
+    const response = await fetch(
+      `${process.env.STRAPI_API_URL}/api/${path}?populate=*`
+    );
+    const result = await response.json();
+    return result?.data[0];
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getDataArr = async (path: string) => {
-  const response = await fetch(
-    `${process.env.STRAPI_API_URL}/api/${path}?populate=*`,
-    { next: { revalidate: 100 } }
-  );
-  const result = await response.json();
-  return result.data;
+  try {
+    const response = await fetch(
+      `${process.env.STRAPI_API_URL}/api/${path}?populate=*`,
+      { next: { revalidate: 100 } }
+    );
+    const result = await response?.json();
+    return result?.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getPosts = async () => {
-  const response = await fetch(
-    `${process.env.STRAPI_API_URL}/api/all-posts?populate=deep`,
-    { next: { revalidate: 100 } }
-  );
-  const result = await response.json();
-  return result.data;
+  try {
+    const response = await fetch(
+      `${process.env.STRAPI_API_URL}/api/all-posts?populate=deep`,
+      { next: { revalidate: 100 } }
+    );
+    const result = await response?.json();
+    return result.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const navbarItems = [

@@ -66,13 +66,7 @@ declare type Post = {
   title: string;
   date: string;
   best_status: boolean;
-  photo: {
-    data: {
-      attributes: {
-        url: string;
-      };
-    };
-  };
+  photo: any;
   post_contents: {
     data: {
       id: number;
@@ -87,7 +81,7 @@ declare type Post = {
               formats: any;
             };
           }[];
-        };
+        } | any
       };
     }[];
   };

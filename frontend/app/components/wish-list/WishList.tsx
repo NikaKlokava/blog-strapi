@@ -1,5 +1,5 @@
-// import { wishListData } from "@/mocks/mocks";
 import { getDataArr } from "@/app/utils/utils";
+import { wishListMockData } from "@/mocks/mocks";
 import Image from "next/image";
 import styles from "./WishList.module.css";
 
@@ -9,7 +9,7 @@ export const WishList = async () => {
     <div className={styles.wish_list_container}>
       <div className={styles.title}>Wish List</div>
       <div className={styles.list_container}>
-        {data.map((item, i) => {
+        {(data || wishListMockData).map((item, i) => {
           return (
             <a
               href={item.attributes.href}
@@ -20,8 +20,10 @@ export const WishList = async () => {
               <Image
                 alt="wish_list_item"
                 src={
-                  process.env.STRAPI_API_URL +
-                  item.attributes.photo.data.attributes.url
+                  data
+                    ? process.env.STRAPI_API_URL +
+                      item.attributes.photo.data.attributes.url
+                    : item.attributes.photo
                 }
                 width={200}
                 height={300}

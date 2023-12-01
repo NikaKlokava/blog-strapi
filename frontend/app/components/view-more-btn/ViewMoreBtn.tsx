@@ -1,6 +1,5 @@
 "use client";
 
-import { InstaAestheticType } from "@/mocks/mocks";
 import { useState } from "react";
 import { InstaPost } from "../insta-post/InstaPost";
 import parentStyles from "../../insta-aesthetics/styles.module.css";
