@@ -5,7 +5,7 @@ import { Pagination } from "./components/pagination/Pagination";
 import { PostItem } from "./components/post-item/Post";
 import { WishList } from "./components/wish-list/WishList";
 import styles from "./styles.module.css";
-import { getDataArr, getPosts } from "./utils/utils";
+import { getPosts } from "./utils/utils";
 
 type Props = {
   searchParams?: {

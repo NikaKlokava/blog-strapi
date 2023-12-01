@@ -19,8 +19,6 @@ export async function generateMetadata({
 }: MetaProps): Promise<Metadata> {
   const name = params.name.charAt(0).toUpperCase() + params.name.slice(1);
 
-  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
-
   return {
     title: `${name} Archives`,
   };

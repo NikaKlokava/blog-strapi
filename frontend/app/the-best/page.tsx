@@ -25,15 +25,7 @@ const TheBestPage = async () => {
 
 export default TheBestPage;
 
-type MetaProps = {
-  params: { name: string };
-};
-
-export async function generateMetadata({
-  params,
-}: MetaProps): Promise<Metadata> {
-  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
-
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `The Best Posts`,
   };

@@ -2,9 +2,10 @@ import Image from "next/image";
 import { JoinTheBlog } from "../components/join-the-blog/JoinTheBlog";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
+import { getData } from "../utils/utils";
 
 const AboutPage = async () => {
-  const data: AboutData = await getData();
+  const data: AboutData = await getData("abouts");
 
   return (
     <div className="flex flex-col items-center gap-y-9 pl-10 pb-10 pr-10">
@@ -30,24 +31,8 @@ const AboutPage = async () => {
 
 export default AboutPage;
 
-type MetaProps = {
-  params: { name: string };
-};
-
-export async function generateMetadata({
-  params,
-}: MetaProps): Promise<Metadata> {
-  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
-
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `About Archives`,
   };
 }
-
-const getData = async () => {
-  const response = await fetch(
-    `${process.env.STRAPI_API_URL}/api/abouts?populate=*`
-  );
-  const result = await response.json();
-  return result.data[0];
-};

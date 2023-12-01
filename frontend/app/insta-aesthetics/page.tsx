@@ -30,6 +30,7 @@ const InstaAestheticsPage = async () => {
           );
         })}
       </div>
+      {/* @ts-expect-error Server Component  */}
       <WishList />
     </div>
   );
@@ -37,15 +38,7 @@ const InstaAestheticsPage = async () => {
 
 export default InstaAestheticsPage;
 
-type MetaProps = {
-  params: { name: string };
-};
-
-export async function generateMetadata({
-  params,
-}: MetaProps): Promise<Metadata> {
-  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
-
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `Insta Aesthetics`,
   };

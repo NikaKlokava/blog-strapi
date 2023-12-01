@@ -65,12 +65,9 @@ type MetaProps = {
 export async function generateMetadata({
   params,
 }: MetaProps): Promise<Metadata> {
-  // const name = params.name.charAt(0).toUpperCase() + params.name.slice(1);
   const name =
     params.name.split("-").join(" ").charAt(0).toUpperCase() +
     params.name.split("-").join(" ").slice(1);
-
-  //const result=  await fetch(`https://.../${id}`).then((res) => res.json()); and return result.title
 
   return {
     title: `${name}`,
