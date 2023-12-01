@@ -7,10 +7,10 @@ import styles from "./styles.module.css";
 const TheBestPage = async () => {
   const data: PostsData = await getPosts();
 
-  const posts = data.reduce((accum: Post[], curr) => {
+  const posts = data?.reduce((accum: Post[], curr) => {
     return [...accum, curr.attributes];
   }, []);
-  const bestPosts = posts.reduce((accum: Post[], current) => {
+  const bestPosts = posts?.reduce((accum: Post[], current) => {
     if (current.best_status) return [...accum, current];
     return accum;
   }, []);

@@ -1,10 +1,10 @@
-// import { instaAestheticData } from "@/mocks/mocks";
 import Image from "next/image";
 import { ViewMoreBtn } from "../components/view-more-btn/ViewMoreBtn";
 import { WishList } from "../components/wish-list/WishList";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getDataArr } from "../utils/utils";
+import { instaAestheticData } from "@/mocks/mocks";
 
 const InstaAestheticsPage = async () => {
   const data: AestheticsData = await getDataArr("aesthetics");
@@ -12,13 +12,15 @@ const InstaAestheticsPage = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.insta_posts_container}>
-        {data.map((item, i) => {
+        {(data || instaAestheticData).map((item, i) => {
           return (
             <div key={i} className={styles.insta_photo}>
               <Image
                 src={
-                  process.env.STRAPI_API_URL +
-                  item.attributes.photo.data.attributes.url
+                  data
+                    ? process.env.STRAPI_API_URL +
+                      item.attributes.photo.data.attributes.url
+                    : item.attributes.photo
                 }
                 width={350}
                 height={400}
@@ -30,7 +32,7 @@ const InstaAestheticsPage = async () => {
           );
         })}
       </div>
-      {/* @ts-expect-error Server Component  */}
+      {/*@ts-ignore */}
       <WishList />
     </div>
   );

@@ -1,4 +1,5 @@
 // import { posts } from "@/mocks/mocks";
+import { postsMockData } from "@/mocks/mocks";
 import { HomeDescription } from "./components/home-description/HomeDescription";
 import { JoinTheBlog } from "./components/join-the-blog/JoinTheBlog";
 import { Pagination } from "./components/pagination/Pagination";
@@ -17,27 +18,30 @@ export default async function Home({ searchParams }: Props) {
   const currentPage = Number(searchParams?.page) || 1;
   const data: PostsData = await getPosts();
 
-  const posts = data.reduce((accum: Post[], curr) => {
-    return [...accum, curr.attributes];
-  }, []);
+  const posts =
+    (data &&
+      data.reduce((accum: Post[], curr) => {
+        return [...accum, curr.attributes];
+      }, [])) ||
+    postsMockData;
 
   const paginate = (items: Post[], pageNumber: number, pageSize: number) => {
     const startIndex = (pageNumber - 1) * pageSize;
-    return items.slice(startIndex, startIndex + pageSize);
+    return items?.slice(startIndex, startIndex + pageSize);
   };
 
   const paginatedPosts = paginate(posts, currentPage, 4);
 
   return (
     <main className={styles.main_container}>
-      {/* @ts-expect-error Server Component  */}
+      {/*@ts-ignore */}
       <HomeDescription />
       <div className={styles.home_container}>
         <div className={styles.posts_container}>
           <PostItem posts={paginatedPosts} currentPage={currentPage} />
-          <Pagination numOfPosts={posts.length} pageSize={4} />
+          <Pagination numOfPosts={posts?.length} pageSize={4} />
         </div>
-        {/* @ts-expect-error Server Component  */}
+        {/*@ts-ignore */}
         <WishList />
         <JoinTheBlog extraClass={"grid_style"} />
       </div>
