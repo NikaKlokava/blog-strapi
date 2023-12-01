@@ -1,6 +1,5 @@
 import { JoinTheBlog } from "@/app/components/join-the-blog/JoinTheBlog";
 import { WishList } from "@/app/components/wish-list/WishList";
-// import { posts } from "@/mocks/mocks";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
@@ -59,7 +58,7 @@ const PostPage = async ({ params }: Props) => {
           );
         })}
       </div>
-      {/* @ts-expect-error Server Component  */}
+      {/*@ts-ignore */}
       <WishList />
       <JoinTheBlog extraClass={"grid_style"} />
     </div>
