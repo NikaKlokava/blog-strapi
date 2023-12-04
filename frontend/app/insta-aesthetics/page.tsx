@@ -4,7 +4,7 @@ import { WishList } from "../components/wish-list/WishList";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getDataArr } from "../utils/utils";
-import { instaAestheticData } from "@/mocks/mocks";
+import { instaAestheticData } from "@/__mocks__/mocks";
 
 const InstaAestheticsPage = async () => {
   const data: AestheticsData = await getDataArr("aesthetics");
@@ -32,7 +32,6 @@ const InstaAestheticsPage = async () => {
           );
         })}
       </div>
-      {/*@ts-ignore */}
       <WishList />
     </div>
   );

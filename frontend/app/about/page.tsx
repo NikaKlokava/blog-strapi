@@ -3,7 +3,7 @@ import { JoinTheBlog } from "../components/join-the-blog/JoinTheBlog";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getData } from "../utils/utils";
-import { aboutMockData } from "@/mocks/mocks";
+import { aboutMockData } from "@/__mocks__/mocks";
 
 const AboutPage = async () => {
   const data: AboutData = await getData("abouts");

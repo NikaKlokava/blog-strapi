@@ -3,13 +3,12 @@ import styles from "./styles.module.css";
 import logo1 from "../../../public/logo1.svg";
 import logo2 from "../../../public/logo2.svg";
 import logo3 from "../../../public/logo3.svg";
-// import {  posts } from "@/mocks/mocks";
 import { JoinTheBlog } from "@/app/components/join-the-blog/JoinTheBlog";
 import Link from "next/link";
 
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
-import { postsMockData } from "@/mocks/mocks";
+import { postsMockData } from "@/__mocks__/mocks";
 
 type MetaProps = {
   params: { name: string };

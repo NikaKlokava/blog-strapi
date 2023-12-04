@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Post.module.css";
-import { postsMockData } from "@/mocks/mocks";
+import { postsMockData } from "@/__mocks__/mocks";
 
 type Props = {
   posts: Post[];

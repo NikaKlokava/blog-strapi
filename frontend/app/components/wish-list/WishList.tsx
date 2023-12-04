@@ -1,5 +1,5 @@
 import { getDataArr } from "@/app/utils/utils";
-import { wishListMockData } from "@/mocks/mocks";
+import { wishListMockData } from "@/__mocks__/mocks";
 import Image from "next/image";
 import styles from "./WishList.module.css";
 
