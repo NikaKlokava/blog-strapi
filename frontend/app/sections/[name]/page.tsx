@@ -66,19 +66,19 @@ const SectionPage = async ({ params }: Props) => {
             return (
               <>
                 <div className={styles.image_container}>
-                  <Image
+                  {post?.photo.data && <Image
                     src={
                       // post.photo.data
                       //   ?
                       process.env.NEXT_PUBLIC_STRAPI_API_URL +
-                      post.photo.data.attributes.url
+                      post?.photo.data.attributes.url
                       // : post.photo
                     }
                     width={350}
                     height={400}
                     alt={"item.descr"}
                     priority={true}
-                  />
+                  />}
                   <div className={styles.post_container}>
                     <div className={styles.post_wrapper}>
                       <div className={styles.logo_wrapper}>

@@ -17,21 +17,23 @@ const AboutPage = async () => {
           data?.attributes.greeting
         }
       </h2>
-      <Image
-        src={
-          // data
-          //   ?
-          process.env.NEXT_PUBLIC_STRAPI_API_URL +
-          data?.attributes.photo.data.attributes.formats.large.url
-          // : aboutMockData.attributes.photo
-        }
-        alt={"about_page_photo"}
-        width={1000}
-        height={500}
-        priority={true}
-        quality={100}
-        className={"w-80% h-auto"}
-      />
+      {data && (
+        <Image
+          src={
+            // data
+            //   ?
+            process.env.NEXT_PUBLIC_STRAPI_API_URL +
+            data?.attributes.photo.data.attributes.formats.large.url
+            // : aboutMockData.attributes.photo
+          }
+          alt={"about_page_photo"}
+          width={1000}
+          height={500}
+          priority={true}
+          quality={100}
+          className={"w-80% h-auto"}
+        />
+      )}
       <div className={styles.description}>
         {
           // || aboutMockData

@@ -10,16 +10,16 @@ export const HomeDescription = async () => {
       <div className={styles.main_description}>
         {
           // || homeMockData
-          data.attributes.description
+          data?.attributes.description
         }
       </div>
       <div className={styles.title}>
         {
           //  || homeMockData
-          data.attributes.title
+          data?.attributes.title
         }
       </div>
-      <Image
+      {data && <Image
         src={
           // data
           //   ?
@@ -36,7 +36,7 @@ export const HomeDescription = async () => {
         }}
         sizes={"(max-width: 600px) 100vw, (max-width: 400px) 100vw, 100vw"}
         className={styles.background_img}
-      />
+      />}
     </>
   );
 };

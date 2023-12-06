@@ -13,33 +13,35 @@ export const PostItem = ({ posts }: Props) => {
     <>
       {posts
         // || postsMockData
-        .map((post, i) => {
+        ?.map((post, i) => {
           return (
             <Link
               key={i}
               rel="preload"
               className={styles.post_container}
-              href={`/post/${post.title.toLowerCase().split(" ").join("-")}`}
+              href={`/post/${post?.title.toLowerCase().split(" ").join("-")}`}
             >
-              <Image
-                src={
-                  // post.photo.data
-                  // ?
-                  process.env.NEXT_PUBLIC_STRAPI_API_URL +
-                  post.photo.data.attributes.url
-                  // : post.photo
-                }
-                alt={`${post.section}_img`}
-                priority={true}
-                width={350}
-                height={400}
-                style={{
-                  objectFit: "cover",
-                }}
-              />
+              {post?.photo.data && (
+                <Image
+                  src={
+                    // post.photo.data
+                    // ?
+                    process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                    post?.photo.data.attributes.url
+                    // : post.photo
+                  }
+                  alt={`${post?.section}_img`}
+                  priority={true}
+                  width={350}
+                  height={400}
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
+              )}
               <div className={styles.post_small_description}>
-                <div className={styles.title}>{post.title}</div>
-                <div className={styles.date}>{post.date}</div>
+                <div className={styles.title}>{post?.title}</div>
+                <div className={styles.date}>{post?.date}</div>
               </div>
             </Link>
           );

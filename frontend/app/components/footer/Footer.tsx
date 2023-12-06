@@ -11,25 +11,27 @@ export const Footer = async () => {
       <p className="text-sm">Created by Veranika Klokava</p>
       <p className="text-sm">2023</p>
       <div className={styles.links_container}>
-        {data.map((link) => {
+        {data?.map((link) => {
           return (
             <a
               key={link.attributes.name}
               className={styles.icon}
               href={`${link.attributes.href}`}
             >
-              <Image
-                src={
-                  // data
-                  //   ?
-                  process.env.NEXT_PUBLIC_STRAPI_API_URL +
-                  link.attributes.svg.data?.attributes.url
-                  // : link.attributes.svg
-                }
-                width={30}
-                height={30}
-                alt={`${link.attributes.name}_svg`}
-              />
+              {data && (
+                <Image
+                  src={
+                    // data
+                    //   ?
+                    process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                    link.attributes.svg.data?.attributes.url
+                    // : link.attributes.svg
+                  }
+                  width={30}
+                  height={30}
+                  alt={`${link.attributes.name}_svg`}
+                />
+              )}
             </a>
           );
         })}

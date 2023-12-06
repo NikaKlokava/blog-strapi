@@ -34,7 +34,7 @@ const PostPage = async ({ params }: Props) => {
           return (
             <>
               <div className={styles.photo_container}>
-                {(item.attributes.photos.data || item.attributes.photos).map(
+                {(item?.attributes?.photos?.data)?.map(
                   (photo: any, i: number) => {
                     return (
                       <Image
@@ -55,7 +55,7 @@ const PostPage = async ({ params }: Props) => {
                 )}
               </div>
               <div className={styles.description}>
-                {item.attributes.description}
+                {item?.attributes.description}
               </div>
             </>
           );

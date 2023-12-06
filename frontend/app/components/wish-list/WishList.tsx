@@ -11,15 +11,15 @@ export const WishList = async () => {
       <div className={styles.list_container}>
         {data
           // || wishListMockData
-          .map((item, i) => {
+          ?.map((item, i) => {
             return (
               <a
-                href={item.attributes.href}
+                href={item?.attributes.href}
                 key={i}
                 target="_blank"
                 rel="preload"
               >
-                <Image
+                {data && <Image
                   alt="wish_list_item"
                   src={
                     // data
@@ -31,7 +31,7 @@ export const WishList = async () => {
                   width={200}
                   height={300}
                   priority={true}
-                />
+                />}
               </a>
             );
           })}

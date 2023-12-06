@@ -14,10 +14,10 @@ const InstaAestheticsPage = async () => {
       <div className={styles.insta_posts_container}>
         {data
           // || instaAestheticData
-          .map((item, i) => {
+          ?.map((item, i) => {
             return (
               <div key={i} className={styles.insta_photo}>
-                <Image
+                {data && <Image
                   src={
                     // data
                     //   ?
@@ -29,7 +29,7 @@ const InstaAestheticsPage = async () => {
                   height={400}
                   alt={"insta_post_photo"}
                   priority={true}
-                />
+                />}
                 <ViewMoreBtn post={item.attributes} />
               </div>
             );
