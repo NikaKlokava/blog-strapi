@@ -1,5 +1,5 @@
 import { getData } from "@/app/utils/utils";
-import { homeMockData } from "@/mocks/mocks";
+import { homeMockData } from "@/__mocks__/mocks";
 import Image from "next/image";
 import styles from "./HomeDescription.module.css";
 

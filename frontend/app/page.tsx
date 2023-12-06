@@ -1,5 +1,5 @@
 // import { posts } from "@/mocks/mocks";
-import { postsMockData } from "@/mocks/mocks";
+import { postsMockData } from "@/__mocks__/mocks";
 import { HomeDescription } from "./components/home-description/HomeDescription";
 import { JoinTheBlog } from "./components/join-the-blog/JoinTheBlog";
 import { Pagination } from "./components/pagination/Pagination";
@@ -34,14 +34,12 @@ export default async function Home({ searchParams }: Props) {
 
   return (
     <main className={styles.main_container}>
-      {/*@ts-ignore */}
       <HomeDescription />
       <div className={styles.home_container}>
         <div className={styles.posts_container}>
           <PostItem posts={paginatedPosts} currentPage={currentPage} />
           <Pagination numOfPosts={posts?.length} pageSize={4} />
         </div>
-        {/*@ts-ignore */}
         <WishList />
         <JoinTheBlog extraClass={"grid_style"} />
       </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
-import { postsMockData } from "@/mocks/mocks";
+import { postsMockData } from "@/__mocks__/mocks";
 
 type Props = {
   params: { name: string };
@@ -58,7 +58,6 @@ const PostPage = async ({ params }: Props) => {
           );
         })}
       </div>
-      {/*@ts-ignore */}
       <WishList />
       <JoinTheBlog extraClass={"grid_style"} />
     </div>

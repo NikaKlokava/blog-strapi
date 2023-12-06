@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import { getDataArr } from "@/app/utils/utils";
-import { mockLinks } from "@/mocks/mocks";
+import { mockLinks } from "@/__mocks__/mocks";
 
 export const Footer = async () => {
   const data: FooterLinks = await getDataArr("links");
