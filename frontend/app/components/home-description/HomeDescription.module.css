@@ -1,0 +1,24 @@
+.main_description {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #e0b8c64d;
+}
+
+.title {
+  font-size: 30px;
+  align-self: center;
+}
+
+.background_img {
+  min-height: 100vh;
+  width: 100vw;
+  filter: opacity(50%);
+}
+
+@media screen and (max-width: 550px) {
+  .background_img {
+    min-height: 40vh;
+    width: 100%;
+    background-size: cover;
+  }
+}

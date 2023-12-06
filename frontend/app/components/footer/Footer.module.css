@@ -1,0 +1,28 @@
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px;
+  align-items: center;
+}
+
+.links_container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 500px) {
+  .footer_container {
+    flex-direction: column;
+    padding: 15px;
+    row-gap: 15px;
+  }
+}

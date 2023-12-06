@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Navbar component The Navbar component renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="navbar_container"
+      >
+        <div
+          class="dot"
+        />
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              HOME
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/sections/travel"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              TRAVEL
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/sections/life"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              LIFE
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/sections/styles"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              STYLES
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/the-best"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              THE BEST
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/insta-aesthetics"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              INSTA AESTHETICS
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+        <div
+          class="navbar_item"
+        >
+          <a
+            class="link"
+            href="/about"
+            rel="preload"
+          >
+            <p
+              class="navbar_title"
+            >
+              ABOUT
+            </p>
+          </a>
+          <div
+            class="dot"
+          />
+        </div>
+      </div>
+      <img
+        alt="burger_icon"
+        class="navbar_icon"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="navbar_container"
+    >
+      <div
+        class="dot"
+      />
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            HOME
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/sections/travel"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            TRAVEL
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/sections/life"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            LIFE
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/sections/styles"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            STYLES
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/the-best"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            THE BEST
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/insta-aesthetics"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            INSTA AESTHETICS
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+      <div
+        class="navbar_item"
+      >
+        <a
+          class="link"
+          href="/about"
+          rel="preload"
+        >
+          <p
+            class="navbar_title"
+          >
+            ABOUT
+          </p>
+        </a>
+        <div
+          class="dot"
+        />
+      </div>
+    </div>
+    <img
+      alt="burger_icon"
+      class="navbar_icon"
+      data-nimg="1"
+      decoding="async"
+      height="40"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style="color: transparent;"
+      width="40"
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

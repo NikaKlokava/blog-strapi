@@ -1,0 +1,37 @@
+.header_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--font-dancing);
+  letter-spacing: 20px;
+  font-weight: 400;
+}
+
+.the {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.title_icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width:750px) {
+  .header_container {
+    row-gap: 0px;
+  }
+}
