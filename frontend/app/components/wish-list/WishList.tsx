@@ -24,7 +24,7 @@ export const WishList = async () => {
                   src={
                     // data
                     //   ?
-                    process.env.STRAPI_API_URL +
+                    process.env.STRAPI_API_URL|| process.env.NEXT_PUBLIC_STRAPI_API_URL +
                     item.attributes.photo.data.attributes.url
                     // : item.attributes.photo
                   }

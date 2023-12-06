@@ -25,7 +25,7 @@ export const PostItem = ({ posts }: Props) => {
               src={
                 // post.photo.data
                   // ? 
-                  process.env.STRAPI_API_URL + post.photo.data.attributes.url
+                  process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL + post.photo.data.attributes.url
                   // : post.photo
               }
               alt={`${post.section}_img`}

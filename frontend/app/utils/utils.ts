@@ -11,7 +11,9 @@ export const initialFormValue = { name: "", email: "" };
 export const getData = async (path: string) => {
   try {
     const response = await fetch(
-      `${process.env.STRAPI_API_URL}/api/${path}?populate=*`
+      `${
+        process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL
+      }/api/${path}?populate=*`
     );
     const result = await response.json();
     return result?.data[0];
@@ -23,7 +25,9 @@ export const getData = async (path: string) => {
 export const getDataArr = async (path: string) => {
   try {
     const response = await fetch(
-      `${process.env.STRAPI_API_URL}/api/${path}?populate=*`,
+      `${
+        process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL
+      }/api/${path}?populate=*`,
       { next: { revalidate: 100 } }
     );
     const result = await response?.json();
@@ -36,7 +40,9 @@ export const getDataArr = async (path: string) => {
 export const getPosts = async () => {
   try {
     const response = await fetch(
-      `${process.env.STRAPI_API_URL}/api/all-posts?populate=deep`,
+      `${
+        process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL
+      }/api/all-posts?populate=deep`,
       { next: { revalidate: 100 } }
     );
     const result = await response?.json();
