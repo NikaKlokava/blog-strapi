@@ -19,24 +19,26 @@ export const HomeDescription = async () => {
           data?.attributes.title
         }
       </div>
-      {data && <Image
-        src={
-          // data
-          //   ?
-          process.env.NEXT_PUBLIC_STRAPI_API_URL +
-          data?.attributes.background.data.attributes.url
-          // : homeMockData.attributes.background
-        }
-        alt={"background_img"}
-        priority={true}
-        width={1920}
-        height={1080}
-        style={{
-          objectFit: "cover",
-        }}
-        sizes={"(max-width: 600px) 100vw, (max-width: 400px) 100vw, 100vw"}
-        className={styles.background_img}
-      />}
+      {data && (
+        <Image
+          src={
+            // data
+            //   ?
+            // process.env.NEXT_PUBLIC_STRAPI_API_URL +
+            data?.attributes.background.data.attributes.url
+            // : homeMockData.attributes.background
+          }
+          alt={"background_img"}
+          priority={true}
+          width={1920}
+          height={1080}
+          style={{
+            objectFit: "cover",
+          }}
+          sizes={"(max-width: 600px) 100vw, (max-width: 400px) 100vw, 100vw"}
+          className={styles.background_img}
+        />
+      )}
     </>
   );
 };
