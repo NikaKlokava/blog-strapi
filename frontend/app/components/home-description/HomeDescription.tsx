@@ -25,7 +25,7 @@ export const HomeDescription = async () => {
             // data
             //   ?
             // process.env.NEXT_PUBLIC_STRAPI_API_URL +
-            data?.attributes.background.data.attributes.url
+            data?.attributes.background.data.attributes.formats.large.url
             // : homeMockData.attributes.background
           }
           alt={"background_img"}
