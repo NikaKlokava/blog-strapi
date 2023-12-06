@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "http",
-        hostname: "sublime-belief-6e0e3b7dad",
+        hostname: "sublime-belief-6e0e3b7dad.strapiapp.com",
         port: "",
         pathname: "/uploads/**",
       },
