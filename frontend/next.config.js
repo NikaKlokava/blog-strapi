@@ -10,8 +10,8 @@ const nextConfig = {
       },
       {
         protocol: "http",
-        hostname: "localhost",
-        port: "1337",
+        hostname: "sublime-belief-6e0e3b7dad",
+        port: "",
         pathname: "/uploads/**",
       },
     ],
