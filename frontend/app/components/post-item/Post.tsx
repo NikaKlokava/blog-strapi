@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Post.module.css";
-import { postsMockData } from "@/__mocks__/mocks";
+// import { postsMockData } from "@/__mocks__/mocks";
 
 type Props = {
   posts: Post[];
@@ -11,7 +11,9 @@ type Props = {
 export const PostItem = ({ posts }: Props) => {
   return (
     <>
-      {(posts || postsMockData).map((post, i) => {
+      {(posts 
+      // || postsMockData
+      ).map((post, i) => {
         return (
           <Link
             key={i}
@@ -21,9 +23,10 @@ export const PostItem = ({ posts }: Props) => {
           >
             <Image
               src={
-                post.photo.data
-                  ? process.env.STRAPI_API_URL + post.photo.data.attributes.url
-                  : post.photo
+                // post.photo.data
+                  // ? 
+                  process.env.STRAPI_API_URL + post.photo.data.attributes.url
+                  // : post.photo
               }
               alt={`${post.section}_img`}
               priority={true}

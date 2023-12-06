@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import { getDataArr } from "@/app/utils/utils";
-import { mockLinks } from "@/__mocks__/mocks";
+// import { mockLinks } from "@/__mocks__/mocks";
 
 export const Footer = async () => {
   const data: FooterLinks = await getDataArr("links");
@@ -11,7 +11,7 @@ export const Footer = async () => {
       <p className="text-sm">Created by Veranika Klokava</p>
       <p className="text-sm">2023</p>
       <div className={styles.links_container}>
-        {(data || mockLinks).map((link) => {
+        {data.map((link) => {
           return (
             <a
               key={link.attributes.name}
@@ -20,10 +20,11 @@ export const Footer = async () => {
             >
               <Image
                 src={
-                  data
-                    ? process.env.STRAPI_API_URL +
-                      link.attributes.svg.data?.attributes.url
-                    : link.attributes.svg
+                  // data
+                  //   ?
+                  process.env.STRAPI_API_URL +
+                  link.attributes.svg.data?.attributes.url
+                  // : link.attributes.svg
                 }
                 width={30}
                 height={30}

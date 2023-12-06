@@ -1,5 +1,5 @@
 import { getData } from "@/app/utils/utils";
-import { homeMockData } from "@/__mocks__/mocks";
+// import { homeMockData } from "@/__mocks__/mocks";
 import Image from "next/image";
 import styles from "./HomeDescription.module.css";
 
@@ -8,17 +8,24 @@ export const HomeDescription = async () => {
   return (
     <>
       <div className={styles.main_description}>
-        {(data || homeMockData).attributes.description}
+        {
+          // || homeMockData
+          data.attributes.description
+        }
       </div>
       <div className={styles.title}>
-        {(data || homeMockData).attributes.title}
+        {
+          //  || homeMockData
+          data.attributes.title
+        }
       </div>
       <Image
         src={
-          data
-            ? process.env.STRAPI_API_URL +
-              data?.attributes.background.data.attributes.url
-            : homeMockData.attributes.background
+          // data
+          //   ?
+          process.env.STRAPI_API_URL +
+          data?.attributes.background.data.attributes.url
+          // : homeMockData.attributes.background
         }
         alt={"background_img"}
         priority={true}

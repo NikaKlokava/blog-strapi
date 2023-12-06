@@ -32,11 +32,12 @@ const SectionPage = async ({ params }: Props) => {
   const data: PostsData = await getPosts();
 
   const posts =
-    (data &&
-      data.reduce((accum: Post[], curr) => {
-        return [...accum, curr.attributes];
-      }, [])) ||
-    postsMockData;
+    // (data &&
+    data.reduce((accum: Post[], curr) => {
+      return [...accum, curr.attributes];
+    }, []);
+  //   ) ||
+  // postsMockData;
 
   const sectionPosts = posts.reduce((accum: Post[], current) => {
     if (current.section === params.name) return [...accum, current];
@@ -67,10 +68,11 @@ const SectionPage = async ({ params }: Props) => {
                 <div className={styles.image_container}>
                   <Image
                     src={
-                      post.photo.data
-                        ? process.env.STRAPI_API_URL +
-                          post.photo.data.attributes.url
-                        : post.photo
+                      // post.photo.data
+                      //   ?
+                      process.env.STRAPI_API_URL +
+                      post.photo.data.attributes.url
+                      // : post.photo
                     }
                     width={350}
                     height={400}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
-import { postsMockData } from "@/__mocks__/mocks";
+// import { postsMockData } from "@/__mocks__/mocks";
 
 type Props = {
   params: { name: string };
@@ -14,11 +14,13 @@ const PostPage = async ({ params }: Props) => {
   const data: PostsData = await getPosts();
 
   const posts =
-    (data &&
-      data.reduce((accum: Post[], curr) => {
-        return [...accum, curr.attributes];
-      }, [])) ||
-    postsMockData;
+    // (data &&
+    data.reduce((accum: Post[], curr) => {
+      return [...accum, curr.attributes];
+    }, []);
+  // )
+  //    ||
+  // postsMockData;
 
   const post = posts.find(
     (post) => post.title.toLowerCase() === params.name.split("-").join(" ")
@@ -37,9 +39,10 @@ const PostPage = async ({ params }: Props) => {
                     return (
                       <Image
                         src={
-                          photo.attributes
-                            ? process.env.STRAPI_API_URL + photo.attributes.url
-                            : photo
+                          // photo.attributes
+                          //   ?
+                          process.env.STRAPI_API_URL + photo.attributes.url
+                          // : photo
                         }
                         width={350}
                         height={400}
