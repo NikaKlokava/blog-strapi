@@ -14,7 +14,7 @@ const AboutPage = async () => {
       <h2 className={styles.greeting}>
         {
           // || aboutMockData
-          data.attributes.greeting
+          data?.attributes.greeting
         }
       </h2>
       <Image
@@ -35,7 +35,7 @@ const AboutPage = async () => {
       <div className={styles.description}>
         {
           // || aboutMockData
-          data.attributes.description
+          data?.attributes.description
         }
       </div>
       <JoinTheBlog />
