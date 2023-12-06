@@ -23,7 +23,7 @@ export const HomeDescription = async () => {
         src={
           // data
           //   ?
-          process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL+
+          process.env.NEXT_PUBLIC_STRAPI_API_URL +
           data?.attributes.background.data.attributes.url
           // : homeMockData.attributes.background
         }

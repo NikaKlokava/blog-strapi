@@ -22,7 +22,7 @@ export const Footer = async () => {
                 src={
                   // data
                   //   ?
-                  process.env.STRAPI_API_URL || process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                  process.env.NEXT_PUBLIC_STRAPI_API_URL +
                   link.attributes.svg.data?.attributes.url
                   // : link.attributes.svg
                 }
