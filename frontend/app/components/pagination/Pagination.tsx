@@ -27,7 +27,7 @@ export const Pagination = ({ numOfPosts, pageSize }: Props) => {
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
   return (
     <div className={styles.wrapper}>
-      {pages.map((page) => {
+      {pages?.map((page) => {
         return (
           <div
             className={styles.num_container}
