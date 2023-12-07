@@ -1,5 +1,5 @@
 // import { posts } from "@/mocks/mocks";
-import { postsMockData } from "@/__mocks__/mocks";
+// import { postsMockData } from "@/__mocks__/mocks";
 import { HomeDescription } from "./components/home-description/HomeDescription";
 import { JoinTheBlog } from "./components/join-the-blog/JoinTheBlog";
 import { Pagination } from "./components/pagination/Pagination";
@@ -19,11 +19,13 @@ export default async function Home({ searchParams }: Props) {
   const data: PostsData = await getPosts();
 
   const posts =
-    (data &&
-      data.reduce((accum: Post[], curr) => {
-        return [...accum, curr.attributes];
-      }, [])) ||
-    postsMockData;
+    // (data &&
+    data.reduce((accum: Post[], curr) => {
+      return [...accum, curr.attributes];
+    }, []);
+  // )
+  //  ||
+  // postsMockData;
 
   const paginate = (items: Post[], pageNumber: number, pageSize: number) => {
     const startIndex = (pageNumber - 1) * pageSize;
