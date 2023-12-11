@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: { name: string };
@@ -19,6 +20,8 @@ const PostPage = async ({ params }: Props) => {
   const post = posts.find(
     (post) => post.title.toLowerCase() === params.name.split("-").join(" ")
   );
+
+  if (!post) notFound();
 
   return (
     <div className={styles.container}>

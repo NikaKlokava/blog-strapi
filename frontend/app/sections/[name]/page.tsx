@@ -5,6 +5,7 @@ import logo2 from "../../../public/logo2.svg";
 import logo3 from "../../../public/logo3.svg";
 import { JoinTheBlog } from "@/app/components/join-the-blog/JoinTheBlog";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
@@ -41,6 +42,12 @@ const SectionPage = async ({ params }: Props) => {
 
   const logo =
     params.name === "travel" ? logo1 : params.name === "life" ? logo2 : logo3;
+  const isPageExist =
+    params.name === "travel" ||
+    params.name === "styles" ||
+    params.name === "life";
+
+  if (!isPageExist) return notFound();
 
   return (
     <div className={styles.main_container}>
