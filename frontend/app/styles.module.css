@@ -12,14 +12,6 @@
   row-gap: 70px;
 }
 
-.posts_container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 350px));
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
 @media screen and (max-width:1000px) {
   .home_container {
     display: flex;
@@ -33,20 +25,10 @@
   .main_container {
     row-gap: 40px;
   }
-
-  .posts_container {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-  }
 }
 
 @media screen and (max-width:500px) {
   .home_container {
     padding-bottom: 20px;
-  }
-
-  .posts_container {
-    max-width: 100%;
   }
 }

@@ -21,3 +21,25 @@
   color: black;
   border-color: black;
 }
+
+.posts_container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 350px));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:750px) {
+  .posts_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .posts_container {
+    max-width: 100%;
+  }
+}
