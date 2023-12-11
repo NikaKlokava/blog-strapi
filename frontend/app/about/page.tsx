@@ -14,7 +14,7 @@ const AboutPage = async () => {
       <h2 className={styles.greeting}>
         {
           // || aboutMockData
-          data?.attributes.greeting
+          data.attributes.greeting
         }
       </h2>
       {data && (
@@ -23,7 +23,7 @@ const AboutPage = async () => {
             // data
             //   ?
             process.env.NEXT_PUBLIC_STRAPI_API_URL +
-            data?.attributes.photo.data.attributes.formats.large.url
+            data.attributes.photo.data.attributes.formats.large.url
             // : aboutMockData.attributes.photo
           }
           alt={"about_page_photo"}
@@ -37,7 +37,7 @@ const AboutPage = async () => {
       <div className={styles.description}>
         {
           // || aboutMockData
-          data?.attributes.description
+          data.attributes.description
         }
       </div>
       <JoinTheBlog />

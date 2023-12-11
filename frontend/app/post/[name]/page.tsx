@@ -4,23 +4,17 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
-// import { postsMockData } from "@/__mocks__/mocks";
 
 type Props = {
   params: { name: string };
 };
 
 const PostPage = async ({ params }: Props) => {
-  const data: PostsData = await getPosts();
+  const data: PostsData = await getPosts({});
 
-  const posts =
-    // (data &&
-    data.reduce((accum: Post[], curr) => {
-      return [...accum, curr.attributes];
-    }, []);
-  // )
-  //    ||
-  // postsMockData;
+  const posts = data.reduce((accum: Post[], curr) => {
+    return [...accum, curr.attributes];
+  }, []);
 
   const post = posts.find(
     (post) => post.title.toLowerCase() === params.name.split("-").join(" ")
@@ -34,14 +28,15 @@ const PostPage = async ({ params }: Props) => {
           return (
             <>
               <div className={styles.photo_container}>
-                {(item?.attributes?.photos?.data)?.map(
+                {item?.attributes?.photos?.data?.map(
                   (photo: any, i: number) => {
                     return (
                       <Image
                         src={
                           // photo.attributes
                           //   ?
-                          process.env.NEXT_PUBLIC_STRAPI_API_URL + photo.attributes.url
+                          process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                          photo.attributes.url
                           // : photo
                         }
                         width={350}

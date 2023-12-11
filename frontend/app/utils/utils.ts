@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import qs from "qs";
 
 export const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -33,10 +34,18 @@ export const getDataArr = async (path: string) => {
   }
 };
 
-export const getPosts = async () => {
+type Param = {
+  urlParams?: any | {};
+};
+
+export const getPosts = async ({ urlParams }: Param) => {
+  const queryString = qs.stringify(urlParams);
+
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/all-posts?populate=deep`,
+      `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/all-posts${
+        queryString ? `?${queryString}` : "?populate=deep"
+      }`,
       { next: { revalidate: 100 } }
     );
     const result = await response?.json();
