@@ -1,11 +1,10 @@
-// import {  posts } from "@/mocks/mocks";
 import type { Metadata } from "next";
 import { PostItem } from "../components/post-item/Post";
 import { getPosts } from "../utils/utils";
 import styles from "./styles.module.css";
 
 const TheBestPage = async () => {
-  const data: PostsData = await getPosts();
+  const data: PostsData = await getPosts({});
 
   const posts = data?.reduce((accum: Post[], curr) => {
     return [...accum, curr.attributes];

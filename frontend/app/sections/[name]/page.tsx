@@ -5,10 +5,10 @@ import logo2 from "../../../public/logo2.svg";
 import logo3 from "../../../public/logo3.svg";
 import { JoinTheBlog } from "@/app/components/join-the-blog/JoinTheBlog";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 import type { Metadata } from "next";
 import { getPosts } from "@/app/utils/utils";
-import { postsMockData } from "@/__mocks__/mocks";
 
 type MetaProps = {
   params: { name: string };
@@ -29,15 +29,11 @@ type Props = {
 };
 
 const SectionPage = async ({ params }: Props) => {
-  const data: PostsData = await getPosts();
+  const data: PostsData = await getPosts({});
 
-  const posts =
-    // (data &&
-    data.reduce((accum: Post[], curr) => {
-      return [...accum, curr.attributes];
-    }, []);
-  //   ) ||
-  // postsMockData;
+  const posts = data.reduce((accum: Post[], curr) => {
+    return [...accum, curr.attributes];
+  }, []);
 
   const sectionPosts = posts.reduce((accum: Post[], current) => {
     if (current.section === params.name) return [...accum, current];
@@ -46,6 +42,12 @@ const SectionPage = async ({ params }: Props) => {
 
   const logo =
     params.name === "travel" ? logo1 : params.name === "life" ? logo2 : logo3;
+  const isPageExist =
+    params.name === "travel" ||
+    params.name === "styles" ||
+    params.name === "life";
+
+  if (!isPageExist) return notFound();
 
   return (
     <div className={styles.main_container}>
@@ -66,19 +68,18 @@ const SectionPage = async ({ params }: Props) => {
             return (
               <>
                 <div className={styles.image_container}>
-                  {post?.photo.data && <Image
-                    src={
-                      // post.photo.data
-                      //   ?
-                      process.env.NEXT_PUBLIC_STRAPI_API_URL +
-                      post?.photo.data.attributes.url
-                      // : post.photo
-                    }
-                    width={350}
-                    height={400}
-                    alt={"item.descr"}
-                    priority={true}
-                  />}
+                  {post?.photo.data && (
+                    <Image
+                      src={
+                        process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                        post?.photo.data.attributes.url
+                      }
+                      width={350}
+                      height={400}
+                      alt={"item.descr"}
+                      priority={true}
+                    />
+                  )}
                   <div className={styles.post_container}>
                     <div className={styles.post_wrapper}>
                       <div className={styles.logo_wrapper}>
