@@ -42,6 +42,7 @@ const SectionPage = async ({ params }: Props) => {
 
   const logo =
     params.name === "travel" ? logo1 : params.name === "life" ? logo2 : logo3;
+
   const isPageExist =
     params.name === "travel" ||
     params.name === "styles" ||
