@@ -20,7 +20,7 @@ export const PostItem = ({ posts }: Props) => {
             {post?.photo.data && (
               <Image
                 src={
-                  process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                  // process.env.NEXT_PUBLIC_STRAPI_API_URL +
                   post?.photo.data.attributes.url
                 }
                 alt={`${post?.section}_img`}
