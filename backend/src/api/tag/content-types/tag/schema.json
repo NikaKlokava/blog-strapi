@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag": {
+      "type": "string",
+      "required": true
+    },
+    "aesthetic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::aesthetic.aesthetic",
+      "inversedBy": "tags"
+    }
+  }
+}

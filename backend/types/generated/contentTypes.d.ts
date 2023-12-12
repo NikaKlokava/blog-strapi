@@ -677,6 +677,238 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAestheticAesthetic extends Schema.CollectionType {
+  collectionName: 'aesthetics';
+  info: {
+    singularName: 'aesthetic';
+    pluralName: 'aesthetics';
+    displayName: 'Aesthetic';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Attribute.Text & Attribute.Required;
+    location: Attribute.String & Attribute.Required;
+    date: Attribute.Date;
+    photo: Attribute.Media;
+    tags: Attribute.Relation<
+      'api::aesthetic.aesthetic',
+      'oneToMany',
+      'api::tag.tag'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aesthetic.aesthetic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aesthetic.aesthetic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomeHome extends Schema.CollectionType {
+  collectionName: 'homes';
+  info: {
+    singularName: 'home';
+    pluralName: 'homes';
+    displayName: 'Home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    background: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLinksLinks extends Schema.CollectionType {
+  collectionName: 'link';
+  info: {
+    singularName: 'links';
+    pluralName: 'link';
+    displayName: 'Links';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    href: Attribute.String & Attribute.Required & Attribute.Unique;
+    svg: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::links.links',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::links.links',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPostContentPostContent extends Schema.CollectionType {
+  collectionName: 'post_contents';
+  info: {
+    singularName: 'post-content';
+    pluralName: 'post-contents';
+    displayName: 'post_content';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
+    photos: Attribute.Media;
+    post: Attribute.Relation<
+      'api::post-content.post-content',
+      'manyToOne',
+      'api::posts.posts'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::post-content.post-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::post-content.post-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPostsPosts extends Schema.CollectionType {
+  collectionName: 'all_posts';
+  info: {
+    singularName: 'posts';
+    pluralName: 'all-posts';
+    displayName: 'posts';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    section: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
+    date: Attribute.Date & Attribute.Required;
+    photo: Attribute.Media & Attribute.Required;
+    best_status: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    post_contents: Attribute.Relation<
+      'api::posts.posts',
+      'oneToMany',
+      'api::post-content.post-content'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::posts.posts',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::posts.posts',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'Tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tag: Attribute.String & Attribute.Required;
+    aesthetic: Attribute.Relation<
+      'api::tag.tag',
+      'manyToOne',
+      'api::aesthetic.aesthetic'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWishListWishList extends Schema.CollectionType {
+  collectionName: 'wish_lists';
+  info: {
+    singularName: 'wish-list';
+    pluralName: 'wish-lists';
+    displayName: 'Wish-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    href: Attribute.String & Attribute.Required;
+    photo: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::wish-list.wish-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::wish-list.wish-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -693,6 +925,13 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::aesthetic.aesthetic': ApiAestheticAesthetic;
+      'api::home.home': ApiHomeHome;
+      'api::links.links': ApiLinksLinks;
+      'api::post-content.post-content': ApiPostContentPostContent;
+      'api::posts.posts': ApiPostsPosts;
+      'api::tag.tag': ApiTagTag;
+      'api::wish-list.wish-list': ApiWishListWishList;
     }
   }
 }
