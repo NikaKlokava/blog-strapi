@@ -10,21 +10,17 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "^4.10.5",
-    "@strapi/plugin-users-permissions": "^4.10.5",
-    "@strapi/strapi": "^4.10.5",
+    "@strapi/plugin-i18n": "4.10.5",
+    "@strapi/plugin-users-permissions": "4.10.5",
+    "@strapi/strapi": "4.10.5",
     "better-sqlite3": "8.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.4",
-    "strapi-plugin-populate-deep": "^3.0.1",
-    "styled-components": "^5.3.11"
+    "strapi-plugin-populate-deep": "^3.0.1"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "18063c96-5b45-447e-9817-f67c9d531460"
+    "uuid": "a83f4679-39fc-4527-833e-1bf6ab85da1f"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
