@@ -38,7 +38,7 @@ const PostPage = async ({ params }: Props) => {
                         src={
                           // photo.attributes
                           //   ?
-                          process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                          // process.env.NEXT_PUBLIC_STRAPI_API_URL +
                           photo.attributes.url
                           // : photo
                         }

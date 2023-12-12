@@ -19,7 +19,7 @@ export const InstaPost = ({ post, close }: Props) => {
             src={
               // post.photo.data
               //   ?
-              process.env.NEXT_PUBLIC_STRAPI_API_URL +
+              // process.env.NEXT_PUBLIC_STRAPI_API_URL +
               post?.photo.data.attributes.url // "http://127.0.0.1:1337"
               // : post.photo
             }

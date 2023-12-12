@@ -22,7 +22,7 @@ const AboutPage = async () => {
           src={
             // data
             //   ?
-            process.env.NEXT_PUBLIC_STRAPI_API_URL +
+            // process.env.NEXT_PUBLIC_STRAPI_API_URL +
             data.attributes.photo.data.attributes.formats.large.url
             // : aboutMockData.attributes.photo
           }
