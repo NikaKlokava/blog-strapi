@@ -748,6 +748,38 @@ export interface ApiAestheticAesthetic extends Schema.CollectionType {
   };
 }
 
+export interface ApiFollowerFollower extends Schema.CollectionType {
+  collectionName: 'followers';
+  info: {
+    singularName: 'follower';
+    pluralName: 'followers';
+    displayName: 'Followers';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    email: Attribute.Email & Attribute.Required & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::follower.follower',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::follower.follower',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.CollectionType {
   collectionName: 'homes';
   info: {
@@ -959,6 +991,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
       'api::aesthetic.aesthetic': ApiAestheticAesthetic;
+      'api::follower.follower': ApiFollowerFollower;
       'api::home.home': ApiHomeHome;
       'api::links.links': ApiLinksLinks;
       'api::post-content.post-content': ApiPostContentPostContent;
