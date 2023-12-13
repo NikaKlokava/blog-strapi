@@ -44,6 +44,27 @@
   color: black;
 }
 
+.empty_img_back {
+  width: 350px;
+  height: 440px;
+  background: linear-gradient(45deg, #ffffff, #feebf2, #ffd2d8ab, #feebf2, #feebf2);
+  background-size: 400% 400%;
+  animation: gradient 5s alternate infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .title {
