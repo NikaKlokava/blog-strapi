@@ -5,7 +5,6 @@ import styles from "./Pagination.module.css";
 import { PostItem } from "../post-item/Post";
 import { useEffect, useState } from "react";
 import { getPosts } from "@/app/utils/utils";
-import { Loader } from "../loader/Loader";
 
 type Props = {
   numOfAllPosts: number;
@@ -78,12 +77,8 @@ export const Pagination = ({ numOfAllPosts, pageSize, params }: Props) => {
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
   return (
     <div className={styles.posts_container}>
-      {postsData ? (
-        <PostItem posts={postsData} currentPage={currentPage} />
-      ) : (
-        <Loader />
-      )}
-      
+      <PostItem posts={postsData} currentPage={currentPage} allPosts={numOfAllPosts}/>
+
       <div className={styles.wrapper}>
         {pages?.map((page) => {
           return (
