@@ -17,19 +17,21 @@ const InstaAestheticsPage = async () => {
           ?.map((item, i) => {
             return (
               <div key={i} className={styles.insta_photo}>
-                {data && <Image
-                  src={
-                    // data
-                    //   ?
-                    process.env.NEXT_PUBLIC_STRAPI_API_URL +
-                    item.attributes.photo.data.attributes.url
-                    // : item.attributes.photo
-                  }
-                  width={350}
-                  height={400}
-                  alt={"insta_post_photo"}
-                  priority={true}
-                />}
+                {data && (
+                  <Image
+                    src={
+                      // data
+                      //   ?
+                      // process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                      item.attributes.photo.data.attributes.url
+                      // : item.attributes.photo
+                    }
+                    width={350}
+                    height={400}
+                    alt={"insta_post_photo"}
+                    priority={true}
+                  />
+                )}
                 <ViewMoreBtn post={item.attributes} />
               </div>
             );

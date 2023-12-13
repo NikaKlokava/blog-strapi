@@ -42,6 +42,7 @@ const SectionPage = async ({ params }: Props) => {
 
   const logo =
     params.name === "travel" ? logo1 : params.name === "life" ? logo2 : logo3;
+
   const isPageExist =
     params.name === "travel" ||
     params.name === "styles" ||
@@ -71,7 +72,7 @@ const SectionPage = async ({ params }: Props) => {
                   {post?.photo.data && (
                     <Image
                       src={
-                        process.env.NEXT_PUBLIC_STRAPI_API_URL +
+                        // process.env.NEXT_PUBLIC_STRAPI_API_URL +
                         post?.photo.data.attributes.url
                       }
                       width={350}
