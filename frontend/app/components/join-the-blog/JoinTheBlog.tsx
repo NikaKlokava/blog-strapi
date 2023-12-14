@@ -15,16 +15,19 @@ export const JoinTheBlog = ({ extraClass }: Props) => {
 
   const onSubmit = async (values: { name: string; email: string }) => {
     try {
-      const data = await fetch("http://localhost:1337" + `/api/followers`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + process.env,
-        },
-        body: JSON.stringify({
-          data: values,
-        }),
-      });
+      const data = await fetch(
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/api/followers`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + process.env,
+          },
+          body: JSON.stringify({
+            data: values,
+          }),
+        }
+      );
       data.ok ? setSuccess(true) : setSuccess(false);
     } catch (err) {
       console.log(err);
