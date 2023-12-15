@@ -12,6 +12,7 @@
   "dependencies": {
     "@strapi/plugin-i18n": "^4.15.5",
     "@strapi/plugin-users-permissions": "^4.15.5",
+    "@strapi/provider-email-nodemailer": "^4.15.5",
     "@strapi/strapi": "^4.15.5",
     "better-sqlite3": "8.0.1",
     "react": "^18.0.0",
@@ -31,5 +32,8 @@
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.14"
+  }
 }
