@@ -7,10 +7,10 @@ module.exports = {
       return [...accum, current.email];
     }, []);
 
-    if (emails) {
+    // if (emails) {
       try {
-        await strapi.plugin("email").service("email").send({
-          to: emails,
+        await strapi.plugins["email"].services.email.send({
+          to: "veronika.kazakevich1997@gmail.com",
           from: "The Traveler",
           subject: `Hello from "Traveler"! I have a new post for you.`,
           text: `Hello! A new post has been released, let's join "The Traveler".`,
@@ -18,6 +18,6 @@ module.exports = {
       } catch (err) {
         console.log(err);
       }
-    }
+    // }
   },
 };
