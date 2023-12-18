@@ -9,7 +9,7 @@ module.exports = {
 
     if (emails) {
       try {
-        await strapi.plugins["email"].services.email.send({
+        await strapi.plugin("email").service("email").send({
           to: emails,
           from: "The Traveler",
           subject: `Hello from "Traveler"! I have a new post for you.`,
