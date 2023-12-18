@@ -14,7 +14,7 @@ type Props = {
 export default async function Home({ searchParams }: Props) {
   const allPostsData: PostsData = await getPosts({});
 
-  const numOfPosts = allPostsData.reduce((accum: Post[], curr) => {
+  const numOfPosts = allPostsData?.reduce((accum: Post[], curr) => {
     return [...accum, curr.attributes];
   }, []).length;
 
