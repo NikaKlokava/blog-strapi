@@ -44,7 +44,7 @@ export const Pagination = ({ numOfAllPosts, pageSize, params }: Props) => {
   useEffect(() => {
     getPosts({ urlParams })
       .then((res) => {
-        const posts = res.reduce((accum: Post[], curr: any) => {
+        const posts = res?.reduce((accum: Post[], curr: any) => {
           return [...accum, curr.attributes];
         }, []);
         setPostsData(posts);
@@ -77,7 +77,11 @@ export const Pagination = ({ numOfAllPosts, pageSize, params }: Props) => {
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
   return (
     <div className={styles.posts_container}>
-      <PostItem posts={postsData} currentPage={currentPage} allPosts={numOfAllPosts}/>
+      <PostItem
+        posts={postsData}
+        currentPage={currentPage}
+        allPosts={numOfAllPosts}
+      />
 
       <div className={styles.wrapper}>
         {pages?.map((page) => {
