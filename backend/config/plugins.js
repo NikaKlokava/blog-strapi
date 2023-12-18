@@ -11,8 +11,8 @@ module.exports = ({ env }) => ({
         },
       },
       settings: {
-        defaultFrom: env("SMTP_USER_EMAIL"),
-        defaultReplyTo: env("SMTP_USER_EMAIL"),
+        defaultFrom: env("SMTP_USER_EMAIL_FROM"),
+        defaultReplyTo: env("SMTP_USER_EMAIL_TO"),
       },
     },
   },
