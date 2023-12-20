@@ -27,6 +27,6 @@ This application is an example of a blog with many features that allows you to r
 - error handling (error.tsx, global-error.tsx), not-found;
 - data fetching, caching and revalidating;
 - Jest tests;
-- strapi-plugin-populate-deep, strapi/provider-email-nodemailer, mail sending;
-- strapi transfer --to / --from server (using transfer token);
-- send mails (using Nodemailer provider, lifecycle hook)
+- strapi-plugin-populate-deep, strapi/provider-email-nodemailer;
+- strapi transfer --to / --from remoteURL (using transfer token);
+- send mails (Nodemailer provider, lifecycle hook)
