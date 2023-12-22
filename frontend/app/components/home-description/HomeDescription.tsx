@@ -1,32 +1,23 @@
-import { getData } from "@/app/utils/utils";
-// import { homeMockData } from "@/__mocks__/mocks";
+// import { getData } from "@/app/utils/utils";
+import { homeMockData } from "@/__mocks__/mocks";
 import Image from "next/image";
 import styles from "./HomeDescription.module.css";
 
 export const HomeDescription = async () => {
-  const data: HomeData = await getData("homes");
+  // const data: HomeData = await getData("homes");
+  const data: HomeData = homeMockData;
+
   return (
     <>
       <div className={styles.main_description}>
-        {
-          // || homeMockData
-          data?.attributes.description
-        }
+        {data?.attributes.description}
       </div>
-      <div className={styles.title}>
-        {
-          //  || homeMockData
-          data?.attributes.title
-        }
-      </div>
+      <div className={styles.title}>{data?.attributes.title}</div>
       {data && (
         <Image
           src={
-            // data
-            //   ?
-            // process.env.NEXT_PUBLIC_STRAPI_API_URL +
-            data?.attributes.background.data.attributes.url
-            // : homeMockData.attributes.background
+            // data?.attributes.background.data.attributes.url
+            data.attributes.background
           }
           alt={"background_img"}
           priority={true}

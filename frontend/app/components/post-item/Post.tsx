@@ -21,13 +21,16 @@ export const PostItem = ({ posts, allPosts }: Props) => {
               className={styles.post_container}
               href={`/post/${post?.title.toLowerCase().split(" ").join("-")}`}
             >
-              {post?.photo.data && (
+              {post?.photo && (
                 <Image
-                  src={post?.photo.data.attributes.url}
+                  src={
+                    // post?.photo.data.attributes.url
+                    post.photo
+                  }
                   alt={`${post?.section}_img`}
                   priority={true}
-                  width={350}
-                  height={400}
+                  // width={350}
+                  // height={400}
                   style={{
                     objectFit: "cover",
                   }}

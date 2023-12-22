@@ -1,9 +1,10 @@
+import { postsMockData } from "@/__mocks__/mocks";
 import { HomeDescription } from "./components/home-description/HomeDescription";
 import { JoinTheBlog } from "./components/join-the-blog/JoinTheBlog";
 import { Pagination } from "./components/pagination/Pagination";
 import { WishList } from "./components/wish-list/WishList";
 import styles from "./styles.module.css";
-import { getPosts } from "./utils/utils";
+// import { getPosts } from "./utils/utils";
 
 type Props = {
   searchParams?: {
@@ -12,11 +13,13 @@ type Props = {
 };
 
 export default async function Home({ searchParams }: Props) {
-  const allPostsData: PostsData = await getPosts({});
+  // const allPostsData: PostsData = await getPosts({});
 
-  const numOfPosts = allPostsData?.reduce((accum: Post[], curr) => {
-    return [...accum, curr.attributes];
-  }, []).length;
+  // const numOfPosts = allPostsData?.reduce((accum: Post[], curr) => {
+  //   return [...accum, curr.attributes];
+  // }, []).length;
+
+  const numOfPosts = postsMockData.length;
 
   return (
     <main className={styles.main_container}>
