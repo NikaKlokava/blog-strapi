@@ -28,9 +28,11 @@ export const JoinTheBlog = ({ extraClass }: Props) => {
           }),
         }
       );
-      data.ok ? setSuccess(true) : setSuccess(false);
+      data?.ok ? setSuccess(true) : setSuccess(false);
     } catch (err) {
       console.log(err);
+    } finally {
+      setSuccess(true);
     }
   };
   return (

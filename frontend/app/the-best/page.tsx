@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { PostItem } from "../components/post-item/Post";
-import { getPosts } from "../utils/utils";
+// import { getPosts } from "../utils/utils";
 import styles from "./styles.module.css";
+import { postsMockData } from "@/__mocks__/mocks";
 
 const TheBestPage = async () => {
-  const data: PostsData = await getPosts({});
+  // const data: PostsData = await getPosts({});
 
-  const posts = data?.reduce((accum: Post[], curr) => {
-    return [...accum, curr.attributes];
-  }, []);
+  // const posts = data?.reduce((accum: Post[], curr) => {
+  //   return [...accum, curr.attributes];
+  // }, []);
+  const posts = postsMockData;
+
   const bestPosts = posts?.reduce((accum: Post[], current) => {
     if (current.best_status) return [...accum, current];
     return accum;

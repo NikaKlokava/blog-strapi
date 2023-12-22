@@ -4,7 +4,8 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import styles from "./Pagination.module.css";
 import { PostItem } from "../post-item/Post";
 import { useEffect, useState } from "react";
-import { getPosts } from "@/app/utils/utils";
+// import { getPosts } from "@/app/utils/utils";
+import { postsMockData } from "@/__mocks__/mocks";
 
 type Props = {
   numOfAllPosts: number;
@@ -30,7 +31,8 @@ export const Pagination = ({ numOfAllPosts, pageSize, params }: Props) => {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const [postsData, setPostsData] = useState<Post[]>();
+  const [postsData, setPostsData] = useState<Post[]>(postsMockData);
+
   const urlParamsObj = {
     sort: { createdAt: "desc" },
     populate: "deep",
@@ -42,14 +44,15 @@ export const Pagination = ({ numOfAllPosts, pageSize, params }: Props) => {
   const [urlParams, setUrlParams] = useState<urlParamsObject>(urlParamsObj);
 
   useEffect(() => {
-    getPosts({ urlParams })
-      .then((res) => {
-        const posts = res?.reduce((accum: Post[], curr: any) => {
-          return [...accum, curr.attributes];
-        }, []);
-        setPostsData(posts);
-      })
-      .catch((err) => console.log(err));
+    // getPosts({ urlParams })
+    //   .then((res) => {
+    //     const posts = res?.reduce((accum: Post[], curr: any) => {
+    //       return [...accum, curr.attributes];
+    //     }, []);
+    //     setPostsData(posts);
+    //   })
+    //   .catch((err) => console.log(err));
+    setPostsData(postsMockData);
   }, [urlParams]);
 
   const handlePageClick = (page: number) => {
