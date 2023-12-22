@@ -8,7 +8,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import type { Metadata } from "next";
-import { getPosts } from "@/app/utils/utils";
+import { postsMockData } from "@/__mocks__/mocks";
+// import { getPosts } from "@/app/utils/utils";
 
 type MetaProps = {
   params: { name: string };
@@ -29,11 +30,12 @@ type Props = {
 };
 
 const SectionPage = async ({ params }: Props) => {
-  const data: PostsData = await getPosts({});
+  // const data: PostsData = await getPosts({});
 
-  const posts = data.reduce((accum: Post[], curr) => {
-    return [...accum, curr.attributes];
-  }, []);
+  // const posts = data.reduce((accum: Post[], curr) => {
+  //   return [...accum, curr.attributes];
+  // }, []);
+  const posts = postsMockData;
 
   const sectionPosts = posts.reduce((accum: Post[], current) => {
     if (current.section === params.name) return [...accum, current];
@@ -69,14 +71,14 @@ const SectionPage = async ({ params }: Props) => {
             return (
               <>
                 <div className={styles.image_container}>
-                  {post?.photo.data && (
+                  {post?.photo && (
                     <Image
                       src={
-                        // process.env.NEXT_PUBLIC_STRAPI_API_URL +
-                        post?.photo.data.attributes.url
+                        // post?.photo.data.attributes.url
+                        post.photo
                       }
-                      width={350}
-                      height={400}
+                      // width={350}
+                      // height={400}
                       alt={"item.descr"}
                       priority={true}
                     />

@@ -14,17 +14,14 @@ export const InstaPost = ({ post, close }: Props) => {
     <>
       <div className={styles.modal_wrapper} onClick={close}></div>
       <div className={styles.modal_container}>
-        {post?.photo.data && (
+        {post?.photo && (
           <Image
             src={
-              // post.photo.data
-              //   ?
-              // process.env.NEXT_PUBLIC_STRAPI_API_URL +
-              post?.photo.data.attributes.url // "http://127.0.0.1:1337"
-              // : post.photo
+              // post?.photo.data.attributes.url
+              post.photo
             }
-            width={450}
-            height={400}
+            // width={450}
+            // height={400}
             alt={"current_post"}
             priority={true}
             className={styles.post_photo}

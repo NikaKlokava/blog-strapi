@@ -1,9 +1,11 @@
+import { mockLinks } from "@/__mocks__/mocks";
 import styles from "./Footer.module.css";
 import Image from "next/image";
-import { getDataArr } from "@/app/utils/utils";
+// import { getDataArr } from "@/app/utils/utils";
 
 export const Footer = async () => {
-  const data: FooterLinks = await getDataArr("link");
+  // const data: FooterLinks = await getDataArr("link");
+  const data: FooterLinks = mockLinks;
 
   return (
     <div className={styles.footer_container}>
@@ -19,7 +21,10 @@ export const Footer = async () => {
             >
               {data && (
                 <Image
-                  src={link.attributes.svg.data?.attributes.url}
+                  src={
+                    // link.attributes.svg.data?.attributes.url
+                    link.attributes.svg
+                  }
                   width={30}
                   height={30}
                   alt={`${link.attributes.name}_svg`}
