@@ -41,7 +41,7 @@ export const mockLinks: FooterLinks = [
 export const postsMockData: Post[] = [
   {
     section: "styles",
-    title: "Some title example 3",
+    title: "Style title example 3",
     date: "16 October 2022",
     photo: image3,
     best_status: true,
@@ -57,12 +57,40 @@ export const postsMockData: Post[] = [
             photos: [image2, image3, image6, image1],
           },
         },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image6, image1, image2, image3],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image2, image6, image1, image3, image6, image1],
+          },
+        },
       ],
     },
   },
   {
     section: "travel",
-    title: "Some title example 3",
+    title: "Travel title example 2",
     date: "16 October 2022",
     photo: image1,
     best_status: true,
@@ -89,9 +117,9 @@ export const postsMockData: Post[] = [
   },
   {
     section: "styles",
-    title: "Some title example 3",
+    title: "Style title example ",
     date: "16 October 2022",
-    photo: image1,
+    photo: image3,
     best_status: false,
     post_contents: {
       data: [
@@ -135,6 +163,244 @@ export const postsMockData: Post[] = [
         adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna`,
             photos: [image3, image1],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3, image5],
+          },
+        },
+      ],
+    },
+  },
+  {
+    section: "styles",
+    title: "Styles title example 2",
+    date: "16 October 2022",
+    photo: image3,
+    best_status: false,
+    post_contents: {
+      data: [
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3, image1],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3, image5],
+          },
+        },
+      ],
+    },
+  },
+  {
+    section: "life",
+    title: "Life title example ",
+    date: "16 October 2022",
+    photo: image2,
+    best_status: false,
+    post_contents: {
+      data: [
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3, image1, image4],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image1],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna.`,
+            photos: [image1, image5, image2],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3, image5],
+          },
+        },
+      ],
+    },
+  },
+  {
+    section: "life",
+    title: "Life title example 2",
+    date: "16 October 2022",
+    photo: image2,
+    best_status: false,
+    post_contents: {
+      data: [
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image3, image1, image4],
+          },
+        },
+        {
+          id: 555,
+          attributes: {
+            title: "some title",
+            description: `Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna`,
+            photos: [image1],
           },
         },
         {
