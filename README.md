@@ -1,14 +1,14 @@
 # <p align="center"> _*`Blog-Strapi`*_ </p>
 
 ## [_Website_](https://blog-strapi-zeta.vercel.app/)
- 
-# 
+
+#
 
 ### Project
 
-- This application is an example of a blog with many features that allows you to read many articles, join the blog to stay updated with the latest events, follow the latest fashion trends and immerse into the world of travel. 
-- As a blog owner, you can easily create new posts, add media, edit and delete necessary information thanks to Strapy's simple interface. 
-- It's build using  Strapi (the leading open-source composable Content Management System (CMS) ). 
+- This application is an example of a blog with many features that allows you to read many articles, join the blog to stay updated with the latest events, follow the latest fashion trends and immerse into the world of travel.
+- As a blog owner, you can easily create new posts, add media, edit and delete necessary information thanks to Strapy's simple interface.
+- It's build using Strapi (the leading open-source composable Content Management System (CMS) ).
 - For training purposes, I deployed the Strapi application on Strapi Cloud, using 14 days of free use. Today it has expired, so all data is based on mocks.
 
 #
