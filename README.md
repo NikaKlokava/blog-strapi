@@ -1,24 +1,21 @@
-# _`Blog-Strapi`_
+# <p align="center"> _*`Blog-Strapi`*_ </p>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Backend: Strapi.
+## [_Website_](https://blog-strapi-zeta.vercel.app/)
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
 
-#
 
-## [_Website_]()
+### Project
 
-#
-
-## Description
-
-This application is an example of a blog with many features that allows you to read many articles, join the blog to stay updated with the latest events, follow the latest fashion trends and delve into the world of travel. As a blog owner, you can easily create new posts, add media, edit and delete necessary information thanks to Strapy's simple interface. 
+- This application is an example of a blog with many features that allows you to read many articles, join the blog to stay updated with the latest events, follow the latest fashion trends and immerse into the world of travel. 
+- As a blog owner, you can easily create new posts, add media, edit and delete necessary information thanks to Strapy's simple interface. 
+- It's build using  Strapi (the leading open-source composable Content Management System (CMS) ). 
+- For training purposes, I deployed the Strapi application on Strapi Cloud, using 14 days of free use. Today it has expired, so all data is based on mocks.
 
 #
 
 ## Work with:
 
-- NextJS (using App Router)dep. on Vercel, Strapi dep. on Strapi Cloud;
+- NextJS (using App Router) dep. on Vercel, Strapi dep. on Strapi Cloud;
 - Server-side rendering (SSR), Client-side rendering (CSR);
 - defining routes, pages and layouts, linking and navigating, dynamic routes;
 - CSS modules, Tailwind CSS;
